@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1px" height="1850px" viewBox="0 0 1 1850" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Dotted Line</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="02_OurStory_UpdatedTimeline" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-275.000000, -6071.000000)" stroke-dasharray="1,5,1,5" stroke-linecap="square">
+        <g id="Timeline" transform="translate(0.000000, 5764.000000)" stroke="#008BC1">
+            <g id="Group-2" transform="translate(250.000000, 160.934724)">
+                <path d="M25.5,146.5 L25.5,1996.5" id="Dotted-Line"></path>
+            </g>
+        </g>
+    </g>
+</svg>

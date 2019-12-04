@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="56px" height="1px" viewBox="0 0 56 1" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Line Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="02_OurStory" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-320.000000, -5950.000000)" stroke-dasharray="1,5,1,5" stroke-linecap="square">
+        <g id="Timeline" transform="translate(0.000000, 5764.000000)" stroke="#C3C3C3">
+            <g id="Years" transform="translate(240.000000, 178.000000)">
+                <g id="Dotted-Lines" transform="translate(80.000000, 7.000000)">
+                    <path d="M0.5,1.5 L60.5,1.5" id="Line-Copy"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

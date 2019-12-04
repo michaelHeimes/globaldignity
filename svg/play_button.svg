@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="58px" height="59px" viewBox="0 0 58 59" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>Play Button</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="28.8" cy="28.8" r="28.8"></circle>
+    </defs>
+    <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="04b_Resources_Inspiration" transform="translate(-310.000000, -1083.000000)">
+            <g id="3-Column-with-Image" transform="translate(168.000000, 899.000000)">
+                <g id="Group-3" transform="translate(0.500000, 0.000000)">
+                    <g id="Play-Button" transform="translate(141.700000, 184.700000)">
+                        <g id="Oval-3">
+                            <use fill-opacity="0.2" fill="#797979" fill-rule="evenodd" xlink:href="#path-1"></use>
+                            <circle stroke="#FFFFFF" stroke-width="3.84" cx="28.8" cy="28.8" r="26.88"></circle>
+                        </g>
+                        <path d="M31.9572824,19.3816352 L42.2171761,36.9263249 L42.2171761,36.9263249 C42.5740362,37.5365651 42.3686311,38.3205548 41.7583909,38.6774148 C41.5623505,38.7920566 41.3393389,38.8524772 41.1122385,38.8524772 L20.5924511,38.8524772 L20.5924511,38.8524772 C19.8855267,38.8524772 19.3124511,38.2794017 19.3124511,37.5724772 C19.3124511,37.3453769 19.3728718,37.1223653 19.4875135,36.9263249 L29.7474072,19.3816352 L29.7474072,19.3816352 C30.1042673,18.771395 30.888257,18.5659899 31.4984972,18.92285 C31.6882898,19.0338381 31.8462943,19.1918426 31.9572824,19.3816352 Z" id="Triangle" fill="#FFFFFF" transform="translate(30.852448, 28.800029) rotate(90.000000) translate(-30.852448, -28.800029) "></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

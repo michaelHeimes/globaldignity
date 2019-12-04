@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="44px" height="28px" viewBox="0 0 44 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>arrow copy 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-1.2%" y="-1.5%" width="102.3%" height="103.5%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.05 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="04a_Resources_TeachingTools1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-1204.000000, -1982.000000)">
+        <g id="Learner-Experiences" filter="url(#filter-1)" transform="translate(120.000000, 1296.000000)" fill="#171C22" fill-rule="nonzero">
+            <g id="Leaner-Experiences-Collapsed" transform="translate(0.000000, 356.000000)">
+                <path d="M1091.83435,336.40192 C1091.57702,336.658963 1091.43243,337.007761 1091.43243,337.371477 C1091.43243,337.735194 1091.57702,338.083991 1091.83435,338.341034 L1104.75024,347.59808 C1105.00728,347.85541 1105.35608,348 1105.7198,348 C1106.08351,348 1106.43231,347.85541 1106.68936,347.59808 L1119.5984,338.341034 C1120.13387,337.805563 1120.13387,336.937392 1119.5984,336.40192 C1119.06292,335.866448 1118.19475,335.866448 1117.65928,336.40192 L1105.71637,344.692834 L1093.77346,336.40192 C1093.51642,336.14459 1093.16762,336 1092.8039,336 C1092.44019,336 1092.09139,336.14459 1091.83435,336.40192 Z" id="arrow-copy-3"></path>
+            </g>
+        </g>
+    </g>
+</svg>

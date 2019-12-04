@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="59px" height="59px" viewBox="0 0 59 59" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>arrow scroll down</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Arrow-Scroll-Down" transform="translate(-13.000000, -13.000000)">
+            <g id="arrow-scroll-down">
+                <path d="M25.1476669,38.8571326 C24.826005,39.1784368 24.6452672,39.6144335 24.6452672,40.0690792 C24.6452672,40.523725 24.826005,40.9597217 25.1476669,41.2810259 L41.2925333,52.8523331 C41.6138375,53.173995 42.0498343,53.3547328 42.50448,53.3547328 C42.9591257,53.3547328 43.3951225,53.173995 43.7164267,52.8523331 L59.8527281,41.2810259 C60.5220678,40.6116862 60.5220677,39.5264723 59.8527281,38.8571326 C59.1833884,38.1877929 58.0981745,38.1877929 57.4288348,38.8571326 L42.5001975,49.2207756 L27.5715602,38.8571326 C27.250256,38.5354707 26.8142593,38.3547328 26.3596135,38.3547328 C25.9049678,38.3547328 25.4689711,38.5354707 25.1476669,38.8571326 Z" id="arrow" fill="#FFFFFF" fill-rule="nonzero"></path>
+                <rect id="Rectangle-20-Copy" stroke="#FFFFFF" transform="translate(42.500000, 42.500000) rotate(45.000000) translate(-42.500000, -42.500000) " x="13.5" y="13.5" width="58" height="58" rx="29"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

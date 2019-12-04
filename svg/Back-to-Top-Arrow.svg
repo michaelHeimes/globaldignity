@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="55px" height="56px" viewBox="0 0 55 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Back to Top Arrow</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="01_Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-1385.000000, -2504.000000)">
+        <g id="Back-to-Top-Arrow" transform="translate(1385.000000, 2504.203125)">
+            <rect id="Rectangle-26" fill="#008BC1" x="0" y="0.5" width="55" height="55"></rect>
+            <path d="M14.2305688,22.6554543 C13.9845921,22.9011575 13.8463808,23.2345668 13.8463808,23.5822371 C13.8463808,23.9299073 13.9845921,24.2633166 14.2305688,24.5090198 L26.5766431,33.3576665 C26.8223463,33.6036432 27.1557556,33.7418545 27.5034259,33.7418545 C27.8510961,33.7418545 28.1845054,33.6036432 28.4302086,33.3576665 L40.7697333,24.5090198 C41.2815812,23.9971718 41.2815812,23.1673023 40.7697332,22.6554543 C40.2578853,22.1436064 39.4280158,22.1436064 38.9161678,22.6554543 L27.500151,30.5805931 L16.0841343,22.6554543 C15.8384311,22.4094776 15.5050218,22.2712663 15.1573515,22.2712663 C14.8096813,22.2712663 14.476272,22.4094776 14.2305688,22.6554543 Z" id="arrow" fill="#FFFFFF" fill-rule="nonzero" transform="translate(27.500000, 28.006560) scale(1, -1) translate(-27.500000, -28.006560) "></path>
+        </g>
+    </g>
+</svg>

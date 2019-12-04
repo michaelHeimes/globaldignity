@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="44px" height="28px" viewBox="0 0 44 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>arrow</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-1.2%" y="-2.0%" width="102.3%" height="104.6%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.05 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="04a_Resources_TeachingTools1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-1204.000000, -3208.000000)">
+        <g id="Teaching-Resources" filter="url(#filter-1)" transform="translate(120.000000, 2907.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="Exploring-Dignity-Dropdown" transform="translate(0.000000, 261.000000)">
+                <path d="M1091.83435,46.4019198 C1091.57702,46.6589631 1091.43243,47.0077605 1091.43243,47.3714771 C1091.43243,47.7351937 1091.57702,48.0839911 1091.83435,48.3410345 L1104.75024,57.5980802 C1105.00728,57.8554097 1105.35608,58 1105.7198,58 C1106.08351,58 1106.43231,57.8554097 1106.68936,57.5980802 L1119.5984,48.3410345 C1120.13387,47.8055627 1120.13387,46.9373915 1119.5984,46.4019198 C1119.06292,45.8664481 1118.19475,45.8664481 1117.65928,46.4019198 L1105.71637,54.6928342 L1093.77346,46.4019198 C1093.51642,46.1445903 1093.16762,46 1092.8039,46 C1092.44019,46 1092.09139,46.1445903 1091.83435,46.4019198 Z" id="arrow"></path>
+            </g>
+        </g>
+    </g>
+</svg>
