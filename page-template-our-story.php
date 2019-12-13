@@ -17,13 +17,7 @@ get_header(); ?>
 	<?php if( have_rows('banner_with_text_overlay') ): ?>
 		<div id="banner">
 			<?php while( have_rows('banner_with_text_overlay') ): the_row(); ?>	
-				<?php 
-				$image = get_sub_field('banner_image');
-				$size = 'banner-normal-res';
-				if( $image ) {
-					echo wp_get_attachment_image( $image, $size );
-				}
-				?>
+
 				<?php 
 				$image = get_sub_field('high_resolution_banner_image');
 				$size = 'banner-high-res';
@@ -31,10 +25,7 @@ get_header(); ?>
 					echo wp_get_attachment_image( $image, $size );
 				}
 				?>
-<!--
-				<img class="normal-res" src="<?php the_sub_field('banner_image');?>"/>
-				<img class="high-res" src="<?php the_sub_field('high_resolution_banner_image');?>"/> 
--->
+
 				<div id="banner-overlay-text-wrap">
 					<h1 class="centered"><?php the_sub_field('page_title');?></h1>
 					<p class="centered"><?php the_sub_field('banner_overlay_text');?></p>
@@ -80,7 +71,6 @@ get_header(); ?>
 								<a class="blue-down-arrows blue-down-arrow-desktop ps2id" href="#what-we-believe"><img id="about-blue-down-arrow2" src="/wp-content/themes/global-dignity/svg/blue-arrow-scroll-down.svg" width="37px" height="auto" /></a>
 							</div>	
 		
-							<img class="normal-res home-gdd-img" src="<?php the_sub_field('image');?>"/>
 							<img class="high-res home-gdd-img" src="<?php the_sub_field('high_resolution_image');?>"/> 
 							
 						<?php endwhile;?>

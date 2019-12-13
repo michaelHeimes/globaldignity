@@ -17,23 +17,62 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 			
-					<div id="be_the_change" class="wrap-700">
-						<div class="multi-color-line-wrap no-banner"><div class="multi-color-line"><span class="color-1"></span><span class="color-2"></span><span class="color-3"></span><span class="color-4"></span><span class="color-5"></span></div></div>
-					</div>
+			<div class="multi-color-line-wrap no-banner"><div class="multi-color-line"><span class="color-1"></span><span class="color-2"></span><span class="color-3"></span><span class="color-4"></span><span class="color-5"></span></div></div>
+
+			<h1 class="centered wrap-700 intro-padded">Meet Our Partners</h1>
+			
+			<nav id="leadership-navigation" class="page-navigation">
+				<?php
+					wp_nav_menu( array(
+						'theme_location' => 'leadership-menu',
+						'menu_id'        => 'leadership-menu',
+						'menu_class'     => 'wrap-1440',
+					) );
+				?>
+			</nav>
+
+		<?php if( have_rows('leadership_page_title_&_intro') ): ?>
+			<div id="page_title_intro" class="to-be-sticky intro-padded">
+				<?php while( have_rows('leadership_page_title_&_intro') ): the_row(); ?>		
+					<h3 class="centered wrap-700"><?php the_sub_field('page_title');?></h3>
+					<?php if(get_sub_field('page_intro')):?>
+					<div class="centered wrap-700"><?php the_sub_field('page_intro');?></div>
+					<?php endif;?>
+				<?php endwhile;?>
+			</div>
+		<?php endif;?>	
 					
-					<div id="partner-organizations" class="mobile-padded">
-					<h1 class="text-below"><?php the_field('title');?></h1>
-					<?php the_field('text');?>
-						<?php if( have_rows('partners') ): ?>
-							<?php while( have_rows('partners') ): the_row(); ?>
-								<?php if( have_rows('single_partner') ): ?>
-									<?php while( have_rows('single_partner') ): the_row(); ?>	
-										<a href="<?php the_sub_field('link_to_partner');?>" target="_blank"><img src="<?php the_sub_field('logo');?>"/></a>
-									<?php endwhile;?>
-								<?php endif;?>	
-							<?php endwhile;?>
-						<?php endif;?>	
+					
+						<div class="leadership_bio_cards partner-cards">
+							<?php if( have_rows('partners') ): ?>
+								<?php while( have_rows('partners') ): the_row(); ?>
+									<?php if( have_rows('single_partner') ): ?>
+									<div class="single_bio_card_wrap">
+										<div class="single_bio_card wrap-960">
+									
+										<?php while( have_rows('single_partner') ): the_row(); ?>
+										
+											
+											<a class="round-portrait" href="<?php the_sub_field('link_to_partner');?>" target="_blank" style="background-image: url(<?php the_sub_field('logo');?>)"></a>
+											
+											<div class="bio-card-text-wrap">
+												<h3><?php the_sub_field('name');?></h3>
+												<?php the_sub_field('text');?>
+											</div>
+											
+										<?php endwhile;?>
+									<?php endif;?>
+										</div>
+									</div>	
+								<?php endwhile;?>
+							<?php endif;?>	
+						</div>
+						
+						
+					<div class="partner-organizations mobile-padded">
+						
 						<div class="yellow-rule"></div>
+						
 					</div>
 						
 					<div id="partner-form"></div>
@@ -43,22 +82,7 @@ get_header(); ?>
 					<?php echo do_shortcode('[contact-form-7 id="3333" title="Partner Contact Form"]');?>
 					</div>
 					
-			<?php if( have_rows('partners_section') ): ?>
-				<div id="partner-organizations" class="mobile-padded">
-				<?php while( have_rows('partners_section') ): the_row(); ?>
-					<?php if( have_rows('partners') ): ?>
-						<?php while( have_rows('partners') ): the_row(); ?>
-							<?php if( have_rows('single_partner') ): ?>
-								<?php while( have_rows('single_partner') ): the_row(); ?>	
-									<a href="<?php the_sub_field('link_to_partner');?>" target="_blank"><img src="<?php the_sub_field('logo');?>"/></a>
-								<?php endwhile;?>
-							<?php endif;?>	
-						<?php endwhile;?>
-					<?php endif;?>	
-				<?php endwhile;?>
-				</div>
-			<?php endif;?>
-
+					
 		</main><!-- #main -->
 	</div><!-- #primary -->
 	

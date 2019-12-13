@@ -38,14 +38,7 @@ get_header(); ?>
 			
 			<nav id="resources_on_page_navigation" class="centered wrap-1440">
 					<?php if( have_rows('learner_experiences_navigation') ): ?>
-							<?php while( have_rows('learner_experiences_navigation') ): the_row();?>
-								<a href="#learner_experiences" id="learner_experiences_navigation" class="ps2id single-resource-nav normal-res" style="background-image:url(<?php the_sub_field('background_image');?>);background-repeat:no-repeat;background-position:center center; background-size:cover;">
-									<h4>Learning Experiences</h4>
-									<p><?php the_sub_field('text');?></p>
-									<img class="centered" src="/wp-content/themes/global-dignity/svg/arrow-scroll-down.svg" width="42px" height="auto" />
-									<p>view learning experiences</p>
-								<div class="single-resource-nav-mask"></div>			
-								</a>								
+							<?php while( have_rows('learner_experiences_navigation') ): the_row();?>								
 								
 								<a href="#learner_experiences" id="learner_experiences_navigation"  class="ps2id single-resource-nav high-res" style="background-image:url(<?php the_sub_field('background_image');?>);background-repeat:no-repeat;background-position:center center; background-size:cover;">
 									<h4>Learning Experiences</h4>
@@ -58,14 +51,7 @@ get_header(); ?>
 					<?php endif;?>
 							
 					<?php if( have_rows('toolkits_navigation') ): ?>
-							<?php while( have_rows('toolkits_navigation') ): the_row();?>
-								<a href="#toolkits" id="toolkits_navigation" class="ps2id single-resource-nav normal-res" style="background-image:url(<?php the_sub_field('background_image');?>);background-repeat:no-repeat;background-position:center center; background-size:cover;">
-									<h4>Toolkits</h4>
-									<p><?php the_sub_field('text');?></p>
-									<img class="centered" src="/wp-content/themes/global-dignity/svg/arrow-scroll-down.svg" width="42px" height="auto" />
-									<p>view toolkits</p>
-								<div class="single-resource-nav-mask"></div>												
-								</a>								
+							<?php while( have_rows('toolkits_navigation') ): the_row();?>								
 								
 								<a href="#toolkits" id="toolkits_navigation" class="ps2id single-resource-nav high-res" style="background-image:url(<?php the_sub_field('background_image');?>);background-repeat:no-repeat;background-position:center center; background-size:cover;">
 									<h4>Toolkits</h4>
@@ -78,14 +64,7 @@ get_header(); ?>
 					<?php endif;?>
 							
 					<?php if( have_rows('teaching_resources_navigation') ): ?>
-							<?php while( have_rows('teaching_resources_navigation') ): the_row();?>
-								<a href="#teaching_resources" id="teaching_resources_navigation" class="ps2id single-resource-nav normal-res" style="background-image:url(<?php the_sub_field('background_image');?>);background-repeat:no-repeat;background-position:center center; background-size:cover;">
-									<h4>Teaching Resources</h4>
-									<p><?php the_sub_field('text');?></p>
-									<img class="centered" src="/wp-content/themes/global-dignity/svg/arrow-scroll-down.svg" width="42px" height="auto" />
-									<p>view resources</p>
-								<div class="single-resource-nav-mask"></div>												
-								</a>								
+							<?php while( have_rows('teaching_resources_navigation') ): the_row();?>								
 								
 								<a href="#teaching_resources" id="teaching_resources_navigation"  class="ps2id single-resource-nav high-res" style="background-image:url(<?php the_sub_field('background_image');?>);background-repeat:no-repeat;background-position:center center; background-size:cover;">
 									<h4>Teaching Resources</h4>

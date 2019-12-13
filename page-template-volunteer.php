@@ -21,13 +21,6 @@ get_header(); ?>
 				<div id="banner">
 					<?php while( have_rows('banner_with_text_overlay') ): the_row(); ?>	
 						<?php 
-						$image = get_sub_field('banner_image');
-						$size = 'banner-normal-res';
-						if( $image ) {
-							echo wp_get_attachment_image( $image, $size );
-						}
-						?>
-						<?php 
 						$image = get_sub_field('high_resolution_banner_image');
 						$size = 'banner-high-res';
 						if( $image ) {
@@ -35,7 +28,6 @@ get_header(); ?>
 						}
 						?>
 		<!--
-						<img class="normal-res" src="<?php the_sub_field('banner_image');?>"/>
 						<img class="high-res" src="<?php the_sub_field('high_resolution_banner_image');?>"/> 
 		-->
 						<div id="banner-overlay-text-wrap">

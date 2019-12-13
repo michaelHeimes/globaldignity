@@ -34,7 +34,6 @@ get_header(); ?>
 			</div>
 		<?php endif;?>
 		
-			<img class="normal-res founders_image" src="<?php the_field('founders_image');?>"/>
 			<img class="high-res founders_image" src="<?php the_field('founders_high_resolution_image');?>"/> 
 		
 		<?php if( have_rows('leadership_bio_cards') ): ?>
@@ -44,7 +43,6 @@ get_header(); ?>
 				<div class="single_bio_card_wrap">
 					<div class="single_bio_card wrap-960">
 						<?php while( have_rows('single_bio_card') ): the_row(); ?>
-							<img class="normal-res round-portrait" src="<?php the_sub_field('image');?>"/>
 							<img class="high-res round-portrait" src="<?php the_sub_field('high_resolution_image');?>"/> 
 							<div class="bio-card-text-wrap">
 								<h3><?php the_sub_field('name');?></h3><img class="flag" src="<?php the_sub_field('flag');?>"/>

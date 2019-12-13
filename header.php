@@ -110,17 +110,45 @@ jQuery(document).ready(function($) {
 </head>
 
 <body <?php body_class(); ?>>
+	
 <div id="preloader">
 	<div id="loader-animation">
 		<div class="multi-color-line loader-mcl"><span class="color-1"></span><span class="color-2"></span><span class="color-3"></span><span class="color-4"></span><span class="color-5"></span></div>
 	</div>
 </div>
+
+
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'global-dignity' ); ?></a>
 
-		
-
 	<header id="masthead" class="site-header">
+
+		<?php
+		$alert = get_field('activate', 'option');
+		if( $alert && in_array('yes', $alert) ): ?>
+			<div id="top-bar-alert">
+				
+				<div class="wrap-1300">
+				
+					<p><?php the_field('top_bar_message', 'option');?></p>
+					
+					<?php 
+					$link = get_field('top_bar_link', 'option');
+					if( $link ): 
+					    $link_url = $link['url'];
+					    $link_title = $link['title'];
+					    $link_target = $link['target'] ? $link['target'] : '_self';
+					    ?>
+					    <a class="button" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+					<?php endif; ?>
+					
+					<button id="top-bar-close"><span class="one"></span><span class="two"></span></button>
+				
+				</div>
+				
+			</div>
+		<?php endif; ?>
+
 		<div class="site-branding">
 			<?php
 			the_custom_logo();
@@ -220,17 +248,19 @@ jQuery(document).ready(function($) {
 							$post_id = get_sub_field('link', false, false);
 							// check 
 							if( $post_id ): ?>	
-							<p class="desktop" id="nav<?php echo $post_id; ?>"><?php the_sub_field('label');?></p>
-							<a class="mobile" href="<?php the_sub_field('link');?>"><?php the_sub_field('label');?></a>
+							<a id="nav<?php echo $post_id; ?>" href="<?php the_sub_field('link');?>"><?php the_sub_field('label');?></a>
+<!-- 							<a class="mobile" ><?php the_sub_field('label');?></a> -->
+
 							<script>
 								jQuery(document).ready(function($){
 									$("#get_involved_menu_right_inner > div:first-child").addClass('show-card');
-									$('nav.get_involved_navigation p#nav<?php echo $post_id; ?>').hover(function(){
+									$('nav.get_involved_navigation a#nav<?php echo $post_id; ?>').hover(function(){
 										$(".get_involved_preview_card").removeClass('show-card');
 										$(".get_involved_preview_card#<?php echo $post_id; ?>").addClass('show-card');
 									})
 								});
 							</script>
+
 							<?php endif;?>
 						<?php endwhile;?>
 					<?php endif;?>
@@ -250,7 +280,6 @@ jQuery(document).ready(function($) {
 										// check 
 										if( $post_id ): ?>		
 											<div class="get_involved_preview_card" id="<?php echo $post_id; ?>">
-												<img class="normal-res" src="<?php the_sub_field('image');?>"/>
 												<img class="high-res" src="<?php the_sub_field('high_resolution_image');?>"/> 
 												<p><?php the_sub_field('text');?></p>
 												<a class="drawer-link button button-black" href="<?php echo get_the_permalink($post_id); ?>"><?php the_sub_field('button_label');?></a>

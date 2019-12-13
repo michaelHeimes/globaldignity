@@ -200,7 +200,6 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 
 // ***** CUSTOM *****
 // Custom Image Sizes
-add_image_size( 'banner-normal-res', 1440, 600, true );
 add_image_size( 'banner-high-res', 2880, 1200, true );
 
 

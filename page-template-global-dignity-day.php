@@ -21,13 +21,6 @@ get_header(); ?>
 				<div id="banner">
 					<?php while( have_rows('banner_with_text_overlay') ): the_row(); ?>	
 						<?php 
-						$image = get_sub_field('banner_image');
-						$size = 'banner-normal-res';
-						if( $image ) {
-							echo wp_get_attachment_image( $image, $size );
-						}
-						?>
-						<?php 
 						$image = get_sub_field('high_resolution_banner_image');
 						$size = 'banner-high-res';
 						if( $image ) {
@@ -35,7 +28,6 @@ get_header(); ?>
 						}
 						?>
 		<!--
-						<img class="normal-res" src="<?php the_sub_field('banner_image');?>"/>
 						<img class="high-res" src="<?php the_sub_field('high_resolution_banner_image');?>"/> 
 		-->
 						<div id="banner-overlay-text-wrap">
@@ -64,16 +56,6 @@ get_header(); ?>
 								<?php 
 								$link = get_sub_field('link');
 								if( $link ): ?>								
-									<a href="<?php echo $link['url']; ?>" id="left_link" class="get-involved-link-wrap normal-res" style="background-image:url(<?php the_sub_field('background_image');?>)">
-										<span><?php echo $link['title']; ?></span>
-										<div class="get-involved-link-wrap-mask"></div>
-
-									</a>
-								<?php endif; ?>
-
-								<?php 
-								$link = get_sub_field('link');
-								if( $link ): ?>								
 									<a href="<?php echo $link['url']; ?>" id="left_link" class="get-involved-link-wrap high-res" style="background-image:url(<?php the_sub_field('high_resolution_background_image');?>)">
 										<span><?php echo $link['title']; ?></span>
 										<div class="get-involved-link-wrap-mask"></div>
@@ -89,15 +71,6 @@ get_header(); ?>
 								<?php 
 								$link = get_sub_field('link');
 								if( $link ): ?>								
-									<a href="<?php echo $link['url']; ?>" id="center_link" class="get-involved-link-wrap normal-res" style="background-image:url(<?php the_sub_field('background_image');?>)">
-										<span><?php echo $link['title']; ?></span>
-										<div class="get-involved-link-wrap-mask"></div>
-									</a>
-								<?php endif; ?>
-
-								<?php 
-								$link = get_sub_field('link');
-								if( $link ): ?>								
 									<a href="<?php echo $link['url']; ?>" id="center_link" class="get-involved-link-wrap high-res" style="background-image:url(<?php the_sub_field('high_resolution_background_image');?>)">
 										<span><?php echo $link['title']; ?></span>
 										<div class="get-involved-link-wrap-mask"></div>
@@ -110,15 +83,6 @@ get_header(); ?>
 						
 						<?php if( have_rows('right_link') ): ?>
 							<?php while( have_rows('right_link') ): the_row(); ?>
-								<?php 
-								$link = get_sub_field('link');
-								if( $link ): ?>								
-									<a href="<?php echo $link['url']; ?>" id="right_link" class="get-involved-link-wrap normal-res" style="background-image:url(<?php the_sub_field('background_image');?>)">
-										<span><?php echo $link['title']; ?></span>
-										<div class="get-involved-link-wrap-mask"></div>
-									</a>
-								<?php endif; ?>
-
 								<?php 
 								$link = get_sub_field('link');
 								if( $link ): ?>								

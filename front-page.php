@@ -25,95 +25,6 @@ jQuery(document).ready(function($) {
 </script>
 
 	<div id="primary" class="content-area">
-
-
-		<div id="opening-wrap-mobile">
-			<?php if( have_rows('opening_elements') ): ?>
-				<?php while( have_rows('opening_elements') ): the_row(); ?>
-	
-					<div class="opening-element opening-element-1-mobile">
-						<div class="canvas-glow"></div>
-						<canvas id="openingCanvas-mobile"></canvas>
-						<div class="opening-element-inner-mobile">
-								<div id="imagine-text-wrap">
-									<p id="imagine-mobile">Imagine<br>a World</p>
-								</div>
-							<div id="oe-1-underline-mobile"></div>
-							<a href="#oe2-mobile-jump" class="ps2id centered opening-element-1-arrow-mobile opening-arrow"><img src="/wp-content/themes/global-dignity/svg/arrow-scroll-down.svg" width="42px" height="auto" /></a>
-						</div>
-					</div>
-
-					<div class="opening-element opening-element-2-mobile">
-						<div id="oe2-mobile-jump" class="mobile-jump"></div>
-						<div class="oe-bg-img high-res" style="background-image:url(<?php the_sub_field('element_2_high_resolution_background_image');?>)"></div>
-						<div class="oe-bg-img normal-res" style="background-image:url(<?php the_sub_field('element_2_background_image');?>)"></div>
-						<div class="opening-element-mask"></div>
-							<div class="opening-element-wrap-mobile">
-								<div class="frame-mobile frame-top-mobile"></div><div class="frame-mobile frame-right-mobile"></div><div class="frame-mobile frame-bottom-r-mobile"></div><div class="frame-mobile frame-bottom-l-mobile"></div><div class="frame-mobile frame-left-mobile"></div>
-								<div class="opening-element-inner-mobile">
-									<img class="line-globe-mobile" src="/wp-content/themes/global-dignity/svg/line-globe.svg" width="141px" height="auto" />
-									<div class="oe-2-slash-mobile"></div>
-									<div class="oe-2-text-wrap-mobile">
-										<p class="oe-2-text-mobile"><span>where</span> <span>understanding,</span><br><span>compassion</span> <span>and love</span></p>
-										<div class="yellow-triumph-wrap">
-											<p class="yellow-triumph-mobile">triumph</p>
-										</div>
-										<span id="trumph-square-mobile"></span>
-									</div>
-								</div>
-							<a href="#oe3-mobile-jump" class="ps2id centered oe-2-arrow-mobile"><img  src="/wp-content/themes/global-dignity/svg/arrow-scroll-down.svg" width="42px" height="auto" /></a>
-							</div>
-					</div>
-					
-					<div class="opening-element opening-element-3-mobile">
-						<div id="oe3-mobile-jump" class="mobile-jump"></div>
-						<div class="oe-bg-img high-res" style="background-image:url(<?php the_sub_field('element_3_high_resolution_background_image');?>)"></div>
-						<div class="oe-bg-img normal-res" style="background-image:url(<?php the_sub_field('element_3_background_image');?>)"></div>
-						<div class="opening-element-mask"></div>
-						<div class="opening-element-inner-mobile">
-							<div class="oe-3-top-bar-mobile oe-3-bar-mobile"></div>
-							<div class="oe-3-text-wrap-mobile">
-								<div class="oe-3-where-wrap-mobile oe-3-word-wrap-mobile"><p class="oe-3-where-mobile">where<div class="oe-3-where-mask oe-3-mask"></div></p></div>
-								<div class="oe-3-everyone-wrap-mobile oe-3-word-wrap-mobile"><p class="oe-3-everyone-mobile">Everyone</p></div>
-								<div class="oe-3-seen-as-wrap-mobile oe-3-word-wrap-mobile"><p class="oe-3-seen-as-mobile">is seen as</p></div>
-								<div class="oe-3-equal-wrap-mobile oe-3-word-wrap-mobile"><p class="oe-3-equal-mobile">Equal.</p></div>
-								<div class="oe-3-bottom-bar-mobile oe-3-bar-mobile"></div>
-							</div>
-							<a href="#oe4-mobile-jump" class="ps2id centered oe-3-arrow-mobile"><img src="/wp-content/themes/global-dignity/svg/arrow-scroll-down.svg" width="42px" height="auto" /></a>
-						</div>
-					</div>
-					
-					<div class="opening-element opening-element-4-mobile">
-						<div id="oe4-mobile-jump" class="mobile-jump"></div>
-						<div class="oe-bg-img high-res" style="background-image:url(<?php the_sub_field('element_4_high_resolution_background_image');?>)"></div>
-						<div class="oe-bg-img normal-res" style="background-image:url(<?php the_sub_field('element_4_background_image');?>)"></div>
-						<div class="opening-element-mask"></div>
-						<div class="opening-element-inner-mobile">		
-							<div class="oe-4-text-top-mobile">				
-								<p class="we-build-mobile"><span>We</span> <span>are</span> <span>working</span> <span>to</span> <span>build</span></p>
-							</div>
-							<div class="oe-4-bottom-mobile">
-								<div class="oe-4-text-bottom-l-mobile">
-									<p class="that-world-mobile"><span>that</span> <span>world</span></p>
-								</div>
-								<div class="oe-4-text-bottom-r-mobile">
-									<div class="everyday-wrap-mobile">	
-										<p class="everyday-mobile">everyday</p>
-									</div>
-									<p class="we-need-mobile"><span>but</span> <span>we</span> <span>need</span></p>
-									<div class="you-wrap">
-										<p class="you-mobile">you.</p>
-									</div>
-								</div>
-							</div>
-							<a href="#main" class="ps2id centered oe-4-arrow-mobile"><img  src="/wp-content/themes/global-dignity/svg/arrow-scroll-down.svg" width="42px" height="auto" /></a>
-						</div>
-					</div>
-				
-					<?php endwhile;?>
-			<?php endif;?>		
-		</div>
-		
 		
 		<div id="opening-wrap">
 			<?php if( have_rows('opening_elements') ): ?>
@@ -130,6 +41,7 @@ jQuery(document).ready(function($) {
 										<div id="imagine-text-mask"><div id="white-slash"></div></div>
 										<p id="imagine">Imagine a World</p>
 									</div>
+									<div id="oe-1-underline-mobile"></div>
 								</div>
 							<a href="#" class="centered opening-element-1-arrow opening-arrow" id="opening-element-1-arrow-jump"><img src="/wp-content/themes/global-dignity/svg/arrow-scroll-down.svg" width="42px" height="auto" /></a>
 						</div>
@@ -137,18 +49,17 @@ jQuery(document).ready(function($) {
 					</div>
 
 					<div class="opening-element opening-element-2">
-						<div class="oe-bg-img high-res" style="background-image:url(<?php the_sub_field('element_2_background_image');?>)"></div>
-						<div class="oe-bg-img normal-res" style="background-image:url(<?php the_sub_field('element_2_background_image');?>)"></div>
+						<div class="oe-bg-img high-res" style="background-image:url(<?php the_sub_field('element_2_high_resolution_background_image');?>)"></div>
 						<div class="opening-element-mask"></div>
 							<div class="opening-element-wrap oe2-wrap">
 								<div class="frame frame-top"></div><div class="frame frame-right"></div><div class="frame frame-bottom-r"></div><div class="frame frame-bottom-l"></div><div class="frame frame-left"></div>
 								<div class="opening-element-inner">
 									<img class="line-globe" src="/wp-content/themes/global-dignity/svg/line-globe.svg" width="141px" height="auto" />
 									<div class="oe-2-text-wrap"><div class="oe-2-slash"></div>
-										<p class="oe-2-text"><span>where</span> <span>understanding,</span> <span>compassion</span> <span>and love</span></p>
-										<div class="yellow-triumph-wrap oe-word-wrap">
-											<p class="yellow-triumph">triumph<div class="yellow-triumph-mask oe-word-mask"></div></p>
-										</div>
+										<p class="oe-2-text">where understanding, compassion and love</p>
+
+										<p class="yellow-triumph">triumph</p>
+
 										<span id="trumph-square"></span>
 									</div>
 								</div>
@@ -158,16 +69,17 @@ jQuery(document).ready(function($) {
 					</div>
 					
 					<div class="opening-element opening-element-3">
-						<div class="oe-bg-img high-res" style="background-image:url(<?php the_sub_field('element_3_background_image');?>)"></div>
-						<div class="oe-bg-img normal-res" style="background-image:url(<?php the_sub_field('element_3_background_image');?>)"></div>
+						<div class="oe-bg-img high-res" style="background-image:url(<?php the_sub_field('element_3_high_resolution_background_image');?>)"></div>
 						<div class="opening-element-mask"></div>
 						<div class="opening-element-inner">
 							<div class="oe-3-text-wrap">
 							<div class="oe-3-top-bar oe-3-bar"></div>
-								<div class="oe-3-where-wrap oe-3-word-wrap oe-word-wrap"><p class="oe-3-where">where<div class="oe-3-where-mask oe-3-mask oe-word-mask"></div></p></div>
-								<div class="oe-3-everyone-wrap oe-3-word-wrap oe-word-wrap"><p class="oe-3-everyone">Everyone<div class="oe-3-everyone-mask oe-3-mask oe-word-mask"></div></p></div>
-								<div class="oe-3-seen-as-wrap oe-3-word-wrap oe-word-wrap"><p class="oe-3-seen-as">is seen as<div class="oe-3-seen-as-mask oe-3-mask oe-word-mask"></div></p></div>
-								<div class="oe-3-equal-wrap oe-3-word-wrap oe-word-wrap"><p class="oe-3-equal">Equal.<div class="oe-3-equal-mask oe-3-mask oe-word-mask"></div></p></div>
+							
+								<p class="oe-3-where">where</p>
+								<p class="oe-3-everyone">Everyone</p>
+								<p class="oe-3-seen-as">is seen as</p>
+								<p class="oe-3-equal">Equal.</p>
+								
 							<div class="oe-3-bottom-bar oe-3-bar"></div>
 							<a href="#" class="centered oe-3-arrow"><img  src="/wp-content/themes/global-dignity/svg/arrow-scroll-down.svg" width="42px" height="auto" /></a>
 							</div>
@@ -176,8 +88,7 @@ jQuery(document).ready(function($) {
 					</div>
 					
 					<div class="opening-element opening-element-4">
-						<div class="oe-bg-img high-res" style="background-image:url(<?php the_sub_field('element_4_background_image');?>)"></div>
-						<div class="oe-bg-img normal-res" style="background-image:url(<?php the_sub_field('element_4_background_image');?>)"></div>
+						<div class="oe-bg-img high-res" style="background-image:url(<?php the_sub_field('element_4_high_resolution_background_image');?>)"></div>
 						<div class="opening-element-mask"></div>
 						<div class="opening-element-inner oe4-wrap">		
 							<div class="oe-4-text-top">				
@@ -189,14 +100,10 @@ jQuery(document).ready(function($) {
 								</div>
 								<div class="oe-4-text-bottom-r">
 									<div class="everyday-wrap oe-word-wrap">	
-										<div class="everyday-mask oe-word-mask"></div>
 										<p class="everyday">everyday</p>
 									</div>
 									<p class="we-need"><span>but</span> <span>we</span> <span>need</span></p>
-									<div class="you-wrap oe-word-wrap">
-										<div class="you-mask oe-word-mask"></div>
 										<p class="you">you.</p>
-									</div>
 									<div class="bg-circle"></div>
 								</div>
 							</div>
@@ -231,7 +138,6 @@ jQuery(document).ready(function($) {
 				<div id="mission" class="wrap-1300">
 				<?php while( have_rows('text_left_image_right') ): the_row(); ?>
 					<div id="mission-img-wrap" class="mobile">
-						<img class="normal-res" src="<?php the_sub_field('image');?>"/>
 						<img class="high-res" src="<?php the_sub_field('high_resolution_image');?>"/> 
 					</div>
 					<div id="mission-text-button-wrap" class="mobile-padded">
@@ -242,7 +148,6 @@ jQuery(document).ready(function($) {
 							<?php endif; ?>
 					</div>
 					<div id="mission-img-wrap" class="desktop">
-						<img class="normal-res" src="<?php the_sub_field('image');?>"/>
 						<img class="high-res" src="<?php the_sub_field('high_resolution_image');?>"/> 
 					</div>
 				<?php endwhile;?>
@@ -272,7 +177,6 @@ jQuery(document).ready(function($) {
 										<?php endif; ?>
 									</div>
 							</div>
-							<img class="normal-res home-gdd-img" src="<?php the_sub_field('image');?>"/>
 							<img class="high-res home-gdd-img" src="<?php the_sub_field('image_high-res');?>"/> 
 							
 							
@@ -402,7 +306,6 @@ jQuery(document).ready(function($) {
 											<?php endif; ?>
 										</div>
 								</div>
-								<img class="normal-res home-gdd-img" src="<?php the_sub_field('image');?>"/>
 								<img class="high-res home-gdd-img" src="<?php the_sub_field('image_high-res');?>"/> 
 								
 								
@@ -433,7 +336,7 @@ jQuery(document).ready(function($) {
 										<?php 
 										$link = get_sub_field('page_link');
 										if( $link ): ?>
-								<a href="<?php echo $link['url']; ?>" class="join_us_nav nav_four_small normal-res" id="volunteer-link" style="background-image:url(<?php the_sub_field('background_image');?>);"><span><?php echo $link['title']; ?></span><div class="join_us_nav-mask"></div></a>
+
 								<a href="<?php echo $link['url']; ?>" class="join_us_nav nav_four_small high-res" id="volunteer-link" style="background-image:url(<?php the_sub_field('high_resolution_background_image');?>);"><span><?php echo $link['title']; ?></span><div class="join_us_nav-mask"></div></a>
 										<?php endif; ?>
 								<?php endwhile;?>
@@ -444,7 +347,6 @@ jQuery(document).ready(function($) {
 										<?php 
 										$link = get_sub_field('page_link');
 										if( $link ): ?>
-								<a href="<?php echo $link['url']; ?>" class="join_us_nav nav_four_large normal-res" id="global_dignity_day-link" style="background-image:url(<?php the_sub_field('background_image');?>);"><span><?php echo $link['title']; ?></span><div class="join_us_nav-mask"></div></a>
 								<a href="<?php echo $link['url']; ?>" class="join_us_nav nav_four_large high-res" id="global_dignity_day-link" style="background-image:url(<?php the_sub_field('high_resolution_background_image');?>);"><span><?php echo $link['title']; ?></span><div class="join_us_nav-mask"></div></a>
 										<?php endif; ?>
 								<?php endwhile;?>
@@ -455,7 +357,6 @@ jQuery(document).ready(function($) {
 										<?php 
 										$link = get_sub_field('page_link');
 										if( $link ): ?>
-								<a href="<?php echo $link['url']; ?>" class="join_us_nav nav_four_small normal-res" id="donate-link" style="background-image:url(<?php the_sub_field('background_image');?>);"><span><?php echo $link['title']; ?></span><div class="join_us_nav-mask"></div></a>
 								<a href="<?php echo $link['url']; ?>" class="join_us_nav nav_four_small high-res" id="donate-link" style="background-image:url(<?php the_sub_field('high_resolution_background_image');?>);"><span><?php echo $link['title']; ?></span><div class="join_us_nav-mask"></div></a>
 										<?php endif; ?>
 								<?php endwhile;?>
@@ -466,7 +367,6 @@ jQuery(document).ready(function($) {
 										<?php 
 										$link = get_sub_field('page_link');
 										if( $link ): ?>
-								<a href="<?php echo $link['url']; ?>" class="join_us_nav nav_four_large normal-res" id="teaching-link" style="background-image:url(<?php the_sub_field('background_image');?>);"><span><?php echo $link['title']; ?></span><div class="join_us_nav-mask"></div></a>
 								<a href="<?php echo $link['url']; ?>" class="join_us_nav nav_four_large high-res" id="teaching-link" style="background-image:url(<?php the_sub_field('high_resolution_background_image');?>);"><span><?php echo $link['title']; ?></span><div class="join_us_nav-mask"></div></a>
 										<?php endif; ?>
 								<?php endwhile;?>
@@ -479,7 +379,6 @@ jQuery(document).ready(function($) {
 									$link = get_sub_field('page_link');
 									if( $link ): ?>
 									
-							<a href="<?php echo $link['url']; ?>" class="join_us_nav normal-res take-a-dig-link" style="background-image:url(<?php the_sub_field('background_image');?>);"><span><?php echo $link['title']; ?></span><div class="join_us_nav-mask take-a-dig-mask"></div></a>
 								<a href="<?php echo $link['url']; ?>" class="join_us_nav high-res take-a-dig-link" style="background-image:url(<?php the_sub_field('high_resolution_background_image');?>);"><span><?php echo $link['title']; ?></span><div class="join_us_nav-mask take-a-dig-mask"></div></a>
 									<?php endif; ?>
 							<?php endwhile;?>
@@ -497,7 +396,6 @@ jQuery(document).ready(function($) {
 										$link = get_sub_field('page_link');
 										if( $link ): ?>
 										
-								<a href="<?php echo $link['url']; ?>" class="join_us_nav affiliate_nav normal-res" style="background-image:url(<?php the_sub_field('background_image');?>);"><span><?php echo $link['title']; ?></span><div class="join_us_nav-mask take-a-dig-mask"></div></a>
 									<a href="<?php echo $link['url']; ?>" class="join_us_nav affiliate_nav high-res" style="background-image:url(<?php the_sub_field('high_resolution_background_image');?>);"><span><?php echo $link['title']; ?></span><div class="join_us_nav-mask take-a-dig-mask"></div></a>
 										<?php endif; ?>
 								<?php endwhile;?>
@@ -509,7 +407,6 @@ jQuery(document).ready(function($) {
 										$link = get_sub_field('page_link');
 										if( $link ): ?>
 										
-								<a href="<?php echo $link['url']; ?>" class="join_us_nav partner_organization_nav normal-res" style="background-image:url(<?php the_sub_field('background_image');?>);"><span><?php echo $link['title']; ?></span><div class="join_us_nav-mask take-a-dig-mask"></div></a>
 									<a href="<?php echo $link['url']; ?>" class="join_us_nav partner_organization_nav high-res" style="background-image:url(<?php the_sub_field('high_resolution_background_image');?>);"><span><?php echo $link['title']; ?></span><div class="join_us_nav-mask take-a-dig-mask"></div></a>
 										<?php endif; ?>
 								<?php endwhile;?>

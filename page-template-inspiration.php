@@ -45,9 +45,54 @@ get_header(); ?>
 		<?php endif;?>		
 		
 		<div id="inspiration-card-wrap">
-			<?php echo do_shortcode( '[ajax_load_more id="4531436691" container_type="div" acf="true" acf_field_type="repeater" acf_field_name="inspiration_cards" ajax_load_more post_type="post" transition="masonry" masonry_animation="slide-up" users="false" users_role="undefined" users_include="undefined" users_exclude="undefined" users_per_page="undefined" users_order="undefined" users_orderby="undefined" post_type="post, page" posts_per_page="15" scroll="false" button_label="Load More" button_loading_label="Loading More..."]' );?>
 			
+<!-- 			<?php echo do_shortcode( '[ajax_load_more id="4531436691" container_type="div" acf="true" acf_field_type="repeater" acf_field_name="inspiration_cards" ajax_load_more post_type="post" transition="masonry" masonry_animation="slide-up" users="false" users_role="undefined" users_include="undefined" users_exclude="undefined" users_per_page="undefined" users_order="undefined" users_orderby="undefined" post_type="post, page" posts_per_page="15" scroll="false" button_label="Load More" button_loading_label="Loading More..."]' );?> -->
+
+
+
+		<ul id="cat-filter">
+			<li class="label">Filter By:</li>
+			<li><button class="active" data-repeater="default" data-posts-per-page="15" data-scroll="false" data-post-type="post" data-term="">All</button></li>
+			<?php
+		  $categories = get_categories(array(
+		    'show_option_all'    => '',
+		    'orderby'            => 'name',
+		    'order'              => 'ASC',
+		    'style'              => 'list',
+		    'show_count'         => 0,
+		    'hide_empty'         => 1,
+		    'use_desc_for_title' => 1,
+		    'child_of'           => 0,
+		    'feed'               => '',
+		    'feed_type'          => '',
+		    'feed_image'         => '',
+		    'exclude'            => '34,33,32,31,30',
+		    'exclude_tree'       => '',
+		    'include'            => '',
+		    'hierarchical'       => true,
+		    'title_li'           => __( 'Categories' ),
+		    'show_option_none'   => __('No categories'),
+		    'number'             => NULL,
+		    'echo'               => 1,
+		    'depth'              => 0,
+		    'current_category'   => 0,
+		    'pad_counts'         => 0,
+		    'taxonomy'           => 'inspiration_cat',
+		    'walker'             => 'Walker_Category' 
+		      ));
+		  foreach ( $categories as $category ) :?>
+		  
+		   <?php echo '<li><button data-repeater="default" data-posts-per-page="15"  data-scroll="false" data-term="' . $category->slug . '">' . $category->name . '</button></li>';
+		
+		  endforeach;?>
+		</ul>
+		
 			
+		<?php echo do_shortcode( '[ajax_load_more id="inspiration_cards" container_type="div" ajax_load_more post_type="inspiration" taxonomy="inspiration_cat" transition="masonry" masonry_animation="slide-up" users="false" users_role="undefined" users_include="undefined" users_exclude="undefined" users_per_page="undefined" users_order="undefined" users_orderby="undefined" posts_per_page="15" scroll="false" loading_style="infinite classic" button_label="Load More" button_loading_label="Loading More..."]' );?>
+		
+		
+<!-- <?php echo do_shortcode('[ajax_load_more id="alm_team_members" css_classes="grid-x grid-padding-x small-up-2 medium-up-2 large-up-3 xlarge-up-4" category_not_in="19" container_type="div" post_type="team_member" transition_container="false" posts_per_page="999" taxonomy="department" taxonomy_terms="investment-team" taxonomy_operator="IN" order="ASC" orderby="meta_value" no_results_text="<h5>No Team Members Found</h5>" meta_key="last_name" meta_compare="EXISTS" cache="false" cache_id="4001080191"]'); ?> -->
+	
 
 			
 <!--
@@ -67,7 +112,6 @@ get_header(); ?>
 							<?php the_sub_field('youtube_link'); ?></p>
 						<?php endif; ?>
 						<?php if( get_sub_field('image') ): ?>
-							<img class="normal-res" src="<?php the_sub_field('image');?>"/>
 							<img class="high-res" src="<?php the_sub_field('high_resolution_image');?>"/> 
 						<?php endif; ?>
 						<p><?php the_sub_field('text');?></p>

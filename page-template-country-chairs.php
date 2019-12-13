@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Leadership
+ * Template Name: Country Chairs
  *
  * @package Global_Dignity
  */
@@ -33,33 +33,9 @@ get_header(); ?>
 				<?php endwhile;?>
 			</div>
 		<?php endif;?>		
-		
-		<?php if( have_rows('leadership_bio_cards') ): ?>
-			<div class="leadership_bio_cards">
-				<?php while( have_rows('leadership_bio_cards') ): the_row(); ?>			
-		
-				<?php if( have_rows('single_bio_card') ): ?>
-					<div class="single_bio_card_wrap">
-						<div class="single_bio_card wrap-960">
-							<?php while( have_rows('single_bio_card') ): the_row(); ?>
-								
-								<img class="high-res round-portrait" src="<?php the_sub_field('high_resolution_image');?>"/> 
-								<div class="bio-card-text-wrap">
-									<h3><?php the_sub_field('name');?></h3><img class="flag" src="<?php the_sub_field('flag');?>"/>
-									<p class="member-title"><?php the_sub_field('title');?></p>
-									<p><?php the_sub_field('bio_text');?></p>
-								</div>
-							<?php endwhile;?>
-						</div>
-					</div>
-				<?php endif;?>
-
-				<?php endwhile;?>
-			</div>
-		<?php endif;?>		
-		
-		
 				
+		<?php echo do_shortcode( '[ajax_load_more id="4531436695" container_type="div" ajax_load_more post_type="page" meta_key="_wp_page_template" meta_value="page-template-country.php" meta_compare="IN" orderby="title" order="ASC" posts_per_page="10" scroll="false" button_label="Load More" button_loading_label="Loading More..."]' );?>
+		
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

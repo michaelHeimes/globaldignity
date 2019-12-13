@@ -63,9 +63,9 @@ get_header(); ?>
 
 						</div>
 						
+						<?php if( get_sub_field('chairs_name') ): ?>
 						<div id="country-page-copy-wrap">
 							<div class="wrap-960">
-								<img class="normal-res round-portrait" src="<?php the_sub_field('chair_portrait_image');?>"/>
 								<img class="high-res round-portrait" src="<?php the_sub_field('chair_portrait_high_resolution_image');?>"/> 
 								<div id="country_page_copy_text_wrap">
 									<h3><?php the_sub_field('chairs_name');?></h3>
@@ -75,8 +75,40 @@ get_header(); ?>
 								</div>
 							</div>
 						</div>
+						<?php endif;?>
+						
 					<?php endwhile;?>
-				<?php endif;?>		
+				<?php endif;?>	
+				
+				
+				<?php if( have_rows('staff') ): ?>
+						<h4 class="centered staff-heading">Staff</h4>
+				<?php endif;?>	
+				
+				
+				<?php if( have_rows('staff') ): ?>
+					<div id="country-page-copy-wrap">
+					<?php while( have_rows('staff') ): the_row();?>							
+						<?php if( have_rows('single_staff_member') ): ?>
+							<?php while( have_rows('single_staff_member') ): the_row();?>
+							
+							<div class="single-staff-member">
+								<div class="wrap-960">
+									<img class="high-res round-portrait" src="<?php the_sub_field('high_resolution_image');?>"/> 
+									<div id="country_page_copy_text_wrap">
+										<h3><?php the_sub_field('name');?></h3>
+										<?php if(get_sub_field('title')):?><p><?php the_sub_field('title');?></p><?php endif;?>
+										<?php the_sub_field('bio');?>
+									</div>
+								</div>
+							</div>
+							
+							<?php endwhile;?>
+						<?php endif;?>	
+					<?php endwhile;?>
+					</div>
+				<?php endif;?>				
+				
 				
 				<?php if( have_rows('tiled_image_gallery') ): ?>
 					<?php while( have_rows('tiled_image_gallery') ): the_row();?>
