@@ -82,6 +82,22 @@ if($('#top-bar-alert').length) {
 	
 };
 
+
+// Opening Wrap Height
+
+/*
+	function openingWrapHeight() {
+		alertHeight = $(alert).innerHeight();	
+		$(content).css('padding-top', alertHeight);
+	};
+		openingWrapHeight();
+		
+	$(window).resize(function() {
+		openingWrapHeight();
+	});
+*/
+
+
 // Back to top fade on scroll	
   	$(window).scroll(function(){                          
         if ($(this).scrollTop() > 1000) {
@@ -397,9 +413,9 @@ if($('#pledge-form-sent-wrap').length) {
 
 
 // 	Mobile Get Involved Drawer
-/*
 	$(body).on('click', 'li.get-involved-mobile-button a', function(e) {
 		e.preventDefault();
+		console.log("clicked");
 		$('ul#mobile-get-involved-drawer').addClass('show-mgi-drawer');
 	
 	});	
@@ -409,7 +425,6 @@ if($('#pledge-form-sent-wrap').length) {
 		$('ul#mobile-get-involved-drawer').removeClass('show-mgi-drawer');
 	
 	});	
-*/
 			
 // 	Checkbox
 	$(body).on('click', '.checkbox-input-wrap', function() {
@@ -708,16 +723,9 @@ $(window).bind('resize',function(){
 	var redDrop = ("#red-drop")
 	
 	oe1Animation.delay(2)
-	.to(imagineTextMask, 1, {bottom: 16, ease: Power4.easeInOut}, 1)
-	.to(whiteSlash, 0, {height: 20, ease: Linear.easeNone})
-	.to("p#imagine", 0, {autoAlpha: 1, ease: Expo.easeInOut}, 1.7)
-	.to(redDrop, 0.7, {height: 120, ease: Expo.easeInOut}, 3.2)
 	.to(openingElement1Arrow, 1, {y: 70, autoAlpha: 1, ease: Expo.easeInOut})
-	.to(imagineTextMask, 1, {top: 118, ease: Expo.easeInOut}, 3)
-	.to(whiteSlash, 1, {y: 32, ease: Expo.easeInOut}, 3)
 	.to(openingElement1Arrow, .5, {y:62, ease:Power2.easeOut})
 	.to(openingElement1Arrow, .25, {y:70, ease:Bounce.easeOut})
-	.to(redDrop, 1, {height: 0, top: 124, ease: Expo.easeInOut})
 	.to(openingElement1Arrow, .50, {y:64, ease:Power2.easeOut})
 	.to(openingElement1Arrow, .25, {y:70, ease:Bounce.easeOut})
 	

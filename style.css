@@ -878,6 +878,7 @@ nav#leadership-navigation.stuck, nav#resources-navigation.stuck, nav#teaching-na
 ## Menus
 --------------------------------------------------------------*/
 #logo-hamburger-wrap {
+	background: #fff;
     position: relative;
     -webkit-box-shadow:  0 5px 10px 0 rgba(0,0,0,0.15);
 	box-shadow: 0 5px 10px 0 rgba(0,0,0,0.15);
@@ -2475,8 +2476,7 @@ a.centered.arrow-down-skip-link {
 	position: relative;
 	color: #fff;
     text-align: center;
-    padding-top: 14px;
-    padding-bottom: 10px;
+	padding: 14px 50px 10px 16px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2524,8 +2524,8 @@ a.centered.arrow-down-skip-link {
 #top-bar-alert p,
 #top-bar-alert a {
 	color: #fff;
-	font-family: TradeGothicLTPro-BdCn20, sans-serif;
-    font-weight: normal;
+	font-family: HelveticaNeueLTPro-Lt, sans-serif;
+    font-weight: bold;
     font-style: normal;
     font-size: 16px;
     text-decoration: none;
@@ -3317,7 +3317,13 @@ p#footer_text > span:last-child:after {
 	position: relative;
     overflow-Y: hidden;
     min-height: 600vh;
-    min-height: calc(600vh - 100px);
+    min-height: calc(600vh - 52px);
+}
+
+@media screen and (min-width: 992px) {
+	#opening-wrap {
+    	min-height: calc(600vh - 100px);
+    }
 }
 
 #opening-progress-wrap {
@@ -3425,11 +3431,16 @@ p#footer_text > span:last-child:after {
 	overflow: hidden;
 	position: relative;
     width: 100%;
-    min-height: 100vh;
+    min-height: calc(100vh + 60px);
 } 
 
+@media screen and (min-width: 992px) {
+	.opening-element {
+    	min-height: 100vh;
+	}
+}
+
 .opening-element-inner {
-    width: 90%;
     min-width: 0;
     max-width: 290px;
 	text-align: center;
@@ -3538,11 +3549,11 @@ p#imagine {
 #imagine-text-mask {
 	display: none;
     position: absolute;
-    top: 0;
+    top: 118px;
     left: 0;
     right: 0;
     width: 770px;
-    bottom: auto;
+    bottom: 16px;
     margin: auto;
     background: #fff;
 }
@@ -3550,9 +3561,10 @@ p#imagine {
 #white-slash {
 	display: none;
     width: 60px;
-    height: 0;
+    height: 20px;
     background: #fff;
     position: absolute;
+    top: 18px;
     right: 0;
     bottom: 0;
 }
@@ -3627,7 +3639,6 @@ p#imagine {
 
 @media screen and (min-width: 992px) {
 	p#imagine {
-		opacity: 0;
 	    width: 770px;
 	    margin: 0 auto;
 		font-size:  117px;

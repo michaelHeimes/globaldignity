@@ -37,7 +37,6 @@ jQuery(document).ready(function($) {
 							
 								<div id="imagine-text-wrap">
 									<div id="imagine-text-wrap-inner">
-										<div id="red-drop"></div>
 										<div id="imagine-text-mask"><div id="white-slash"></div></div>
 										<p id="imagine">Imagine a World</p>
 									</div>
