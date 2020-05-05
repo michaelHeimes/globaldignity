@@ -488,22 +488,18 @@ var currentPageItemLink = $('.current_page_item a');
 	marginTop();
 	});
 	
-// 	Country Selector
-// Category Filters
+// 	Country and Language Selectors
 var countriesButton = $('#countries button.select-button');
-	$('#countries').on('click', countriesButton, function(e) {
+	$('#countries').on('click', countriesButton, function() {
 		$('ul#country_selector').fadeToggle(300);
 		$('ul#country_selector').toggleClass('countries-clicked');
+		$('ul#language_selector').fadeToggle(300);
+		$('ul#language_selector').toggleClass('countries-clicked');
 		$('button.select-button > img').toggleClass('flipped');
 	});
-	
-/*
-	$('main#main').on('click', function(e) {
-		$('ul#country_selector').fadeOut(300);
-		$('ul#country_selector').removeClass('countries-clicked');
-		$('button.select-button > img').removeClass('flipped');
-	});	
-*/
+
+
+
 	
 // 	Accordian
 	$( ".accordion" ).accordion({

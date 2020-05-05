@@ -7,7 +7,7 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
+	<div id="primary" class="content-area <?php if( get_field('hide_teaching_resources') == true ):?>hide-teaching-resources<?php endif;?>">
 		<main id="main" class="site-main">
 			<div class="multi-color-line-wrap no-banner"><div class="multi-color-line"><span class="color-1"></span><span class="color-2"></span><span class="color-3"></span><span class="color-4"></span><span class="color-5"></span></div></div>
 
@@ -31,6 +31,21 @@ get_header(); ?>
 					<div class="wrap-700">
 						<h3 class="centered wrap-700"><?php the_sub_field('page_title');?></h3>
 						<p class="centered wrap-700"><?php the_sub_field('page_intro');?></p>
+								
+								<div id="countries">
+									<div id="countries-inner">
+										<button class="select-button"><?php the_field('language_button_text');?><img class="select-arrow" src="/wp-content/themes/global-dignity/svg/dropdown-arrow.svg" width="18px" height="auto" /></button>
+			
+										<?php
+											wp_nav_menu( array(
+												'theme_location' => 'language_selector',
+												'menu_id'        => 'language_selector'
+											) );
+										?>
+										
+									</div>
+								</div>
+						
 					</div>
 				<?php endwhile;?>
 			</div>
@@ -62,7 +77,10 @@ get_header(); ?>
 								</a>						
 							<?php endwhile;?>
 					<?php endif;?>
-							
+					
+					
+					<?php if( get_field('hide_teaching_resources') != true ):?>						
+		
 					<?php if( have_rows('teaching_resources_navigation') ): ?>
 							<?php while( have_rows('teaching_resources_navigation') ): the_row();?>							
 								
@@ -75,6 +93,9 @@ get_header(); ?>
 								</a>						
 							<?php endwhile;?>
 					<?php endif;?>
+					
+					<?php endif;?>
+						
 			</nav>
 			
 			<div class="clear resource-module-wrap"></div>
@@ -582,7 +603,10 @@ get_header(); ?>
 						<?php endif;?>									
 					<?php endwhile;?>
 				</div>
-			<?php endif;?>		
+			<?php endif;?>	
+			
+			
+			<?php if( get_field('hide_teaching_resources') != true ):?>	
 			
 			<?php if( have_rows('teaching_resources') ): ?>
 				<div id="teaching_resources" class="wrap-1200 resource-module-wrap">
@@ -806,7 +830,10 @@ get_header(); ?>
 					<?php endwhile;?>
 				</div>
 			<?php endif;?>						
-					
+
+			<?php endif;?>
+			
+								
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

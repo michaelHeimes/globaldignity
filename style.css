@@ -4384,7 +4384,8 @@ button.select-button > img.flipped {
 	        transform: rotateX(180deg) translateY(2px);
 }
 
-ul#country_selector {
+ul#country_selector,
+ul#language_selector {
     display: none;
     position: absolute;
     left: 0;
@@ -4402,16 +4403,24 @@ ul#country_selector {
     transition: max-height 0.3s ease;
 }
 
-ul#country_selector.countries-clicked {
+ul#country_selector.countries-clicked,
+ul#language_selector.countries-clicked {
 	max-height: 300px;
 }
 
-ul#country_selector li {
+ul#country_selector li,
+ul#language_selector li {
 	position: relative;
     padding: 0 0 0 3px;
     margin: 4px 0;	
 }
-ul#country_selector li:after {
+
+ul#language_selector li.current-menu-item {
+	display: none;
+}
+
+ul#country_selector li:after,
+ul#language_selector li:after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -4423,12 +4432,16 @@ ul#country_selector li:after {
     -o-transition: width 0.4s ease;
     transition: width 0.4s ease;
 }
-ul#country_selector li:hover:after {
+ul#country_selector li:hover:after,
+ul#language_selector li:hover:after {
 	width: 88%;
 	width: calc(100% - 36px);
 }
 
-ul#country_selector li a, ul#country_selector li a:visited {
+ul#country_selector li a,
+ul#country_selector li a:visited,
+ul#language_selector li a,
+ul#language_selector li a:visited {
 	color: #171C22;
 	font-weight: bold;
     padding: 4px 4px 2px 14px;
@@ -5351,9 +5364,15 @@ a.single-resource-nav {
 }
 
 @media screen and (min-width: 768px) {
+	
+	.hide-teaching-resources a.single-resource-nav {
+		width: 50%;
+	}
+	
 	a.single-resource-nav {
 	    width: 33.33333%;
 	}	
+	
 }
 
 .single-resource-nav p, .single-resource-nav h4, a.single-resource-nav img {

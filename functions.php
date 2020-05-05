@@ -49,7 +49,8 @@ if ( ! function_exists( 'global_dignity_setup' ) ) :
 			'leadership-menu' => esc_html__( 'Leadership Menu', 'global-dignity' ),
 			'resources-menu' => esc_html__( 'Resources Menu', 'global-dignity' ),
 			'teaching-menu' => esc_html__( 'Teaching Menu', 'global-dignity' ),
-			'country_selector' => esc_html__( 'Countries Menu', 'global-dignity' )
+			'country_selector' => esc_html__( 'Countries Menu', 'global-dignity' ),
+			'language_selector' => esc_html__( 'Language Menu', 'global-dignity' )
 		) );
 
 		/*
