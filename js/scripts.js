@@ -2,6 +2,13 @@ jQuery( document ).ready(function($) {
 	
 var controller = new ScrollMagic.Controller();
 
+// Preloader
+	$(window).load(function(){
+	     $("#preloader").delay(400).fadeOut();
+	     $("body.home").css("overflow", "visible");
+	     $('canvas#openingCanvas').delay(1500).fadeIn(); 
+	});
+
 var $all_oembed_videos = $(".video-wrap > iframe[src*='youtube'], .video-wrap > iframe[src*='vimeo']");
 	$all_oembed_videos.each(function() {
 		$(this).removeAttr('height').removeAttr('width');
@@ -565,106 +572,119 @@ var countriesButton = $('#countries button.select-button');
 	
 	
 // Home Page Only
-if($('body').hasClass('home')) {
+if($('#opening-wrap').length) {
 	
-function openingFloatyAnimation() {	
-	
-	var myRequestAnimationFrame =  window.requestAnimationFrame ||
-		  window.webkitRequestAnimationFrame ||
-		  window.mozRequestAnimationFrame    ||
-		  window.oRequestAnimationFrame      ||
-		  window.msRequestAnimationFrame     ||
-		  function(callback) {
-			  window.setTimeout(callback, 10);
-		  };
-	window.requestAnimationFrame=myRequestAnimationFrame;
-	
-	var canvas = document.getElementById('openingCanvas');
-	canvas.width = window.innerWidth;
-	canvas.height = window.innerHeight;
-	var ctx = canvas.getContext('2d');
-	ctx.globalCompositeOperation = 'lighter';
-	
-	function randomMax(max) {
-		return Math.floor(Math.random() * max);
-	}
-	function distance(a, b) {
-		return ~~Math.sqrt(Math.pow(a.x - b.x, 4) + Math.pow(a.y - b.y, 4));
-	}
-	
-	var particleBackground = 'rgba(0, 0, 0, 0.0)',
-		numParticles = 160,
-		radiusmax = 10,
-		miParticleSize = 20,
-		criticalDistance = 0,
-		colorSet = [
-			'rgba(255,255,255,0.15)',
-		],
-		fillStyle;
-	
-	var Particle = function (ind) {
-		this.ind = ind;
-		this.x = randomMax(canvas.width);
-		this.y = randomMax(canvas.height);
-	  this.dx = (Math.random() - 0.75) * 0.75;
-	  this.dy = (Math.random() - 0.75) * 0.75;
-		this.r = randomMax(radiusmax);
-		this.color = colorSet[Math.floor(Math.random() * colorSet.length)];
+	function setHeight() {
+	windowHeight = $(window).innerHeight();
+		$('.opening-element').css('min-height', windowHeight);
+		$('.opening-element-1-mobile').css('min-height', windowHeight + 60);
+		$('.opening-element-2-mobile').css('min-height', windowHeight + 60);
+		$('.opening-element-3-mobile').css('min-height', windowHeight + 60);
 	};
+	setHeight();
 	
-	Particle.prototype.draw = function () {
-		this.r = this.r > miParticleSize ? flashfactor * (Math.log(this.r) / Math.LN10) : miParticleSize;
-		this.y += this.dy;
-		this.x += this.dx;
-		
-		ctx.beginPath();
-		
-		fillStyle = ctx.createRadialGradient(this.x, this.y, this.r * 0.001, this.x, this.y, this.r);
-		fillStyle.addColorStop(0, this.color);
-		fillStyle.addColorStop(1, particleBackground);
-		
-		ctx.fillStyle = fillStyle;
-		ctx.beginPath();
-		ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
-		ctx.fill();
-	};
+	$(window).resize(function() {
+		setHeight();
+	});
 	
-	var ParticleSystem = function () {
-		ctx.lineWidth = 1;
-		this.particles = [];
+	function openingFloatyAnimation() {	
 		
-		for (var i = 0; i < numParticles; i++) {
-			this.particles.push(new Particle(i));
-		}
-	};
-	ParticleSystem.prototype.draw = function () {
-		this.particles.forEach(function(particle) {
-			particle.draw();
-		});
-	};
-	
-	var particleSystem = new ParticleSystem();
-	
-	window.onresize = function() {
+		var myRequestAnimationFrame =  window.requestAnimationFrame ||
+			  window.webkitRequestAnimationFrame ||
+			  window.mozRequestAnimationFrame    ||
+			  window.oRequestAnimationFrame      ||
+			  window.msRequestAnimationFrame     ||
+			  function(callback) {
+				  window.setTimeout(callback, 10);
+			  };
+		window.requestAnimationFrame=myRequestAnimationFrame;
+		
+		var canvas = document.getElementById('openingCanvas');
 		canvas.width = window.innerWidth;
 		canvas.height = window.innerHeight;
+		var ctx = canvas.getContext('2d');
 		ctx.globalCompositeOperation = 'lighter';
-		particleSystem = new ParticleSystem();
-	};
-	
-	(function animloop(){
-		ctx.clearRect(0, 0, canvas.width, canvas.height);
-		particleSystem.draw();
 		
-		requestAnimationFrame(animloop);
-	})(); 
-	}
+		function randomMax(max) {
+			return Math.floor(Math.random() * max);
+		}
+		function distance(a, b) {
+			return ~~Math.sqrt(Math.pow(a.x - b.x, 4) + Math.pow(a.y - b.y, 4));
+		}
+		
+		var particleBackground = 'rgba(0, 0, 0, 0.0)',
+			numParticles = 160,
+			radiusmax = 10,
+			miParticleSize = 20,
+			criticalDistance = 0,
+			colorSet = [
+				'rgba(255,255,255,0.15)',
+			],
+			fillStyle;
+		
+		var Particle = function (ind) {
+			this.ind = ind;
+			this.x = randomMax(canvas.width);
+			this.y = randomMax(canvas.height);
+		  this.dx = (Math.random() - 0.75) * 0.75;
+		  this.dy = (Math.random() - 0.75) * 0.75;
+			this.r = randomMax(radiusmax);
+			this.color = colorSet[Math.floor(Math.random() * colorSet.length)];
+		};
+		
+		Particle.prototype.draw = function () {
+			this.r = this.r > miParticleSize ? flashfactor * (Math.log(this.r) / Math.LN10) : miParticleSize;
+			this.y += this.dy;
+			this.x += this.dx;
+			
+			ctx.beginPath();
+			
+			fillStyle = ctx.createRadialGradient(this.x, this.y, this.r * 0.001, this.x, this.y, this.r);
+			fillStyle.addColorStop(0, this.color);
+			fillStyle.addColorStop(1, particleBackground);
+			
+			ctx.fillStyle = fillStyle;
+			ctx.beginPath();
+			ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
+			ctx.fill();
+		};
+		
+		var ParticleSystem = function () {
+			ctx.lineWidth = 1;
+			this.particles = [];
+			
+			for (var i = 0; i < numParticles; i++) {
+				this.particles.push(new Particle(i));
+			}
+		};
+		ParticleSystem.prototype.draw = function () {
+			this.particles.forEach(function(particle) {
+				particle.draw();
+			});
+		};
+		
+		var particleSystem = new ParticleSystem();
+		
+		window.onresize = function() {
+			canvas.width = window.innerWidth;
+			canvas.height = window.innerHeight;
+			ctx.globalCompositeOperation = 'lighter';
+			particleSystem = new ParticleSystem();
+		};
+		
+		(function animloop(){
+			ctx.clearRect(0, 0, canvas.width, canvas.height);
+			particleSystem.draw();
+			
+			requestAnimationFrame(animloop);
+		})(); 
+		}
+	
+	openingFloatyAnimation();
 
-openingFloatyAnimation();
-
-$(window).bind('resize',function(){
-    openingFloatyAnimation();
-});
+	$(window).bind('resize',function(){
+	    openingFloatyAnimation();
+	});
 	
 	
 	

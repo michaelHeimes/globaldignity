@@ -8382,3 +8382,221 @@ body .ggsi ggs-root {
 		padding: 0;	
 	}	
 }
+
+/* COVID Updates */
+.covid-hero {
+	height: 100%;
+	min-height: 100vh;
+	padding-top: 52px;
+}
+
+.covid-hero .hero-top .inner {
+
+	padding: 4em 16px 4em 16px;
+}
+
+.covid-hero .hero-top .inner span {
+	display: inline-block;
+	font-family: TradeGothicLTPro-BdCn20,sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 0;
+	line-height: 1;
+}
+
+.covid-hero .hero-top .row.top {
+	position: relative;
+}
+
+.covid-hero .hero-top .row.top img {
+	position: absolute;
+	top: -8px;
+    left: -8px;
+}
+
+.covid-hero .hero-top .row.top span {
+	position: relative;
+	font-size: 66px;
+	color: #FFFFFF;
+	text-transform: uppercase;
+}
+
+.covid-hero .hero-top .row.bottom {
+	position: relative;
+	padding-left: 0.3em;
+	display: flex;
+	flex-direction: column;
+}
+
+.covid-hero .hero-top .row.bottom .left span {
+	font-size: 48px;
+	color: #FFFFFF;
+	margin-top: -0.12em;
+}
+
+.covid-hero .hero-top .row.bottom .right {
+	padding-left: 1.5em;
+}
+
+.covid-hero .hero-top .row.bottom .right div:nth-child(1) span {
+	font-size: 54px;
+	color: #F1C900;
+	margin-top: -0.09em;
+}
+
+.covid-hero .hero-top .row.bottom .right div:nth-child(2) span {
+	font-size: 48px;
+	color: #DD462F;
+	margin-top: -0.12em;
+}
+
+.covid-hero .hero-bottom .inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 3.7em 16px;
+}
+
+.covid-hero .hero-bottom {
+	background-color: #F1C900;
+}
+
+.covid-hero .hero-bottom .left {
+	max-width: 605px;
+	padding-right: 20px;
+}
+
+.covid-hero .hero-bottom .left p {
+	margin-bottom: 0;
+}
+
+.covid-hero .hero-bottom .left .multi-color-line span.color-1 {
+	background-color: rgba(255,255,255,.5);
+}
+
+.covid-hero .hero-bottom .left .hashtag {
+	font-family: TradeGothicLTPro-BdCn20,sans-serif;
+	font-size: 48px;
+	color: #171C22;
+	letter-spacing: 0;
+	padding-top: 0.37em;
+    padding-bottom: 0.25em;
+}
+
+.covid-hero .hero-bottom .right {
+	padding-left: 20px;
+}
+
+.covid-hero .hero-bottom .right a {
+	white-space: nowrap;
+}
+
+@media screen and (min-width:374px) {
+	.covid-hero .hero-top .row.top span {
+		font-size: 78px;
+	}
+}
+
+@media screen and (min-width:580px) {
+	.covid-hero .hero-top .row.bottom {
+		flex-direction: row;
+	}
+	
+	.covid-hero .hero-top .row.bottom >div {
+	    flex: 0 0 auto;
+	    width: auto;
+	}
+}
+
+@media screen and (min-width:992px) {
+	.covid-hero .hero-top .inner {
+	
+		padding: 17.8em 2em 8.6em 6.4em;
+	}
+	
+	.covid-hero .hero-top .inner span {
+
+	}
+
+	.covid-hero .hero-top .row.top img {
+		top: -4.25em;
+	    left: -4.15em;
+	}
+	
+	.covid-hero .hero-top .row.top span {
+		font-size: 120px;
+	}
+	
+	.covid-hero .hero-top .row.bottom {
+		flex-direction: row;
+		padding-left: 0.3em;
+	}
+	
+	.covid-hero .hero-top .row.bottom .left span {
+		font-size: 48px;
+		margin-top: -0.12em;
+	}
+	
+	.covid-hero .hero-top .row.bottom .right {
+		padding-left: 0.65em;
+	}
+	
+	.covid-hero .hero-top .row.bottom .right div:nth-child(1) span {
+		font-size: 120px;
+		margin-top: -0.09em;
+	}
+	
+	.covid-hero .hero-top .row.bottom .right div:nth-child(2) span {
+		font-size: 48px;
+		margin-top: -0.12em;
+	}
+	
+	.covid-hero .hero-bottom .inner {
+		padding: 3.7em 7.75em;
+	}
+	
+	.covid-hero .hero-bottom .left {
+		padding-right: 20px;
+	}
+	
+	.covid-hero .hero-bottom .left .hashtag {
+		font-size: 48px;
+		padding-top: 0.37em;
+	    padding-bottom: 0.25em;
+	}
+	
+	.covid-hero .hero-bottom .right {
+		padding-left: 20px;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

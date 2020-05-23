@@ -90,32 +90,19 @@ src="https://www.facebook.com/tr?id=845052112552765&ev=PageView
 <style>
 
 </style>
-<script type='text/javascript'>
-jQuery(document).ready(function($) {
-	function setHeight() {
-	windowHeight = $(window).innerHeight();
-	$('.opening-element').css('min-height', windowHeight);
-	$('.opening-element-1-mobile').css('min-height', windowHeight + 60);
-	$('.opening-element-2-mobile').css('min-height', windowHeight + 60);
-	$('.opening-element-3-mobile').css('min-height', windowHeight + 60);
-	};
-	setHeight();
-	$(window).resize(function() {
-	setHeight();
-	});
-});
-</script>
 
 <?php endif;?>
 </head>
 
 <body <?php body_class(); ?>>
 	
+<!--
 <div id="preloader">
 	<div id="loader-animation">
 		<div class="multi-color-line loader-mcl"><span class="color-1"></span><span class="color-2"></span><span class="color-3"></span><span class="color-4"></span><span class="color-5"></span></div>
 	</div>
 </div>
+-->
 
 
 <div id="page" class="site">

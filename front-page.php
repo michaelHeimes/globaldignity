@@ -14,115 +14,162 @@
 
 get_header(); ?>
 
-<script type='text/javascript'>
-jQuery(document).ready(function($) {
-	$(window).load(function(){
-     $("#preloader").delay(400).fadeOut();
-     $("body.home").css("overflow", "visible");
-     $('canvas#openingCanvas').delay(1500).fadeIn(); 
-	});
-});
-</script>
-
 	<div id="primary" class="content-area">
+		<?php if(get_field('show_temporary_hero') == 'true'):?>
 		
-		<div id="opening-wrap">
-			<?php if( have_rows('opening_elements') ): ?>
-				<?php while( have_rows('opening_elements') ): the_row(); ?>
+			<div class="covid-hero">
+				<div class="hero-top" style="background-image:url(<?php the_field('temporary_hero_image');?>);">
+					
+					<div class="wrap-1300 inner">
+					
+						<div class="row top">
+							<img class="line-globe" src="/wp-content/themes/global-dignity/svg/line-globe.svg" width="141px" height="auto">
+							<span class="our-world">Our World</span>
+						</div>
+						
+						<div class="row bottom">
+							
+							<div class="left">
+								<span>Has Changed.</span>
+							</div>
 	
-					<div class="opening-element opening-element-1">
-						<div class="canvas-glow"></div>
-						<canvas id="openingCanvas"></canvas>
-						<div class="opening-element-inner">
-							
-								<div id="imagine-text-wrap">
-									<div id="imagine-text-wrap-inner">
-										<div id="imagine-text-mask"><div id="white-slash"></div></div>
-										<p id="imagine">Imagine a World</p>
-									</div>
-									<div id="oe-1-underline-mobile"></div>
-								</div>
-							<a href="#" class="centered opening-element-1-arrow opening-arrow" id="opening-element-1-arrow-jump"><img src="/wp-content/themes/global-dignity/svg/arrow-scroll-down.svg" width="42px" height="auto" /></a>
-						</div>
-					<div id="opening-element-1-bottom" class="opening-element-bottom"></div>
-					</div>
-
-					<div class="opening-element opening-element-2">
-						<div class="oe-bg-img high-res" style="background-image:url(<?php the_sub_field('element_2_high_resolution_background_image');?>)"></div>
-						<div class="opening-element-mask"></div>
-							<div class="opening-element-wrap oe2-wrap">
-								<div class="frame frame-top"></div><div class="frame frame-right"></div><div class="frame frame-bottom-r"></div><div class="frame frame-bottom-l"></div><div class="frame frame-left"></div>
-								<div class="opening-element-inner">
-									<img class="line-globe" src="/wp-content/themes/global-dignity/svg/line-globe.svg" width="141px" height="auto" />
-									<div class="oe-2-text-wrap"><div class="oe-2-slash"></div>
-										<p class="oe-2-text">where understanding, compassion and love</p>
-
-										<p class="yellow-triumph">triumph</p>
-
-										<span id="trumph-square"></span>
-									</div>
-								</div>
-							<a href="#" class="centered oe-2-arrow"><img  src="/wp-content/themes/global-dignity/svg/arrow-scroll-down.svg" width="42px" height="auto" /></a>
+							<div class="right">
+								<div><span>Our Mission</span></div>
+								<div><span>Has Not</span></div>
 							</div>
-					<div id="opening-element-2-bottom" class="opening-element-bottom"></div>
+							
+						</div>
+					
 					</div>
 					
-					<div class="opening-element opening-element-3">
-						<div class="oe-bg-img high-res" style="background-image:url(<?php the_sub_field('element_3_high_resolution_background_image');?>)"></div>
-						<div class="opening-element-mask"></div>
-						<div class="opening-element-inner">
-							<div class="oe-3-text-wrap">
-							<div class="oe-3-top-bar oe-3-bar"></div>
+				</div>
+				
+				<div class="hero-bottom">
+					
+					<div class="wrap-1300 inner">
+					
+						<div class="left">
+						
+							<div class="multi-color-line"><span class="color-1"></span><span class="color-2"></span><span class="color-3"></span><span class="color-4"></span><span class="color-5"></span></div>
 							
-								<p class="oe-3-where">where</p>
-								<p class="oe-3-everyone">Everyone</p>
-								<p class="oe-3-seen-as">is seen as</p>
-								<p class="oe-3-equal">Equal.</p>
+							<div class="hashtag">#unitekindness</div>
+							
+							<p>Unite Kindness inspires children and teens to make a positive impact by being kind to themselves and others during COVID-19.</p>
+							
+						</div>
+						
+						<div class="right">
+							<a class="button button-clear" href="/where-we-work/">Join The Campaign</a>
+						</div>	
+					
+					</div>				
+					
+				</div>
+				
+				
+			</div>
+		
+		<?php else:?>
+		
+			<div id="opening-wrap">
+				<?php if( have_rows('opening_elements') ): ?>
+					<?php while( have_rows('opening_elements') ): the_row(); ?>
+		
+						<div class="opening-element opening-element-1">
+							<div class="canvas-glow"></div>
+							<canvas id="openingCanvas"></canvas>
+							<div class="opening-element-inner">
 								
-							<div class="oe-3-bottom-bar oe-3-bar"></div>
-							<a href="#" class="centered oe-3-arrow"><img  src="/wp-content/themes/global-dignity/svg/arrow-scroll-down.svg" width="42px" height="auto" /></a>
-							</div>
-						</div>
-					<div id="opening-element-3-bottom" class="opening-element-bottom"></div>
-					</div>
-					
-					<div class="opening-element opening-element-4">
-						<div class="oe-bg-img high-res" style="background-image:url(<?php the_sub_field('element_4_high_resolution_background_image');?>)"></div>
-						<div class="opening-element-mask"></div>
-						<div class="opening-element-inner oe4-wrap">		
-							<div class="oe-4-text-top">				
-								<p class="we-build"><span>We</span> <span>are</span> <span>working</span> <span>to</span> <span>build</span></p>
-							</div>
-							<div class="oe-4-bottom">
-								<div class="oe-4-text-bottom-l">
-									<p class="that-world"><span>that</span> <span>world</span></p>
-								</div>
-								<div class="oe-4-text-bottom-r">
-									<div class="everyday-wrap oe-word-wrap">	
-										<p class="everyday">everyday</p>
+									<div id="imagine-text-wrap">
+										<div id="imagine-text-wrap-inner">
+											<div id="imagine-text-mask"><div id="white-slash"></div></div>
+											<p id="imagine">Imagine a World</p>
+										</div>
+										<div id="oe-1-underline-mobile"></div>
 									</div>
-									<p class="we-need"><span>but</span> <span>we</span> <span>need</span></p>
-										<p class="you">you.</p>
-									<div class="bg-circle"></div>
+								<a href="#" class="centered opening-element-1-arrow opening-arrow" id="opening-element-1-arrow-jump"><img src="/wp-content/themes/global-dignity/svg/arrow-scroll-down.svg" width="42px" height="auto" /></a>
+							</div>
+						<div id="opening-element-1-bottom" class="opening-element-bottom"></div>
+						</div>
+	
+						<div class="opening-element opening-element-2">
+							<div class="oe-bg-img high-res" style="background-image:url(<?php the_sub_field('element_2_high_resolution_background_image');?>)"></div>
+							<div class="opening-element-mask"></div>
+								<div class="opening-element-wrap oe2-wrap">
+									<div class="frame frame-top"></div><div class="frame frame-right"></div><div class="frame frame-bottom-r"></div><div class="frame frame-bottom-l"></div><div class="frame frame-left"></div>
+									<div class="opening-element-inner">
+										<img class="line-globe" src="/wp-content/themes/global-dignity/svg/line-globe.svg" width="141px" height="auto" />
+										<div class="oe-2-text-wrap"><div class="oe-2-slash"></div>
+											<p class="oe-2-text">where understanding, compassion and love</p>
+	
+											<p class="yellow-triumph">triumph</p>
+	
+											<span id="trumph-square"></span>
+										</div>
+									</div>
+								<a href="#" class="centered oe-2-arrow"><img  src="/wp-content/themes/global-dignity/svg/arrow-scroll-down.svg" width="42px" height="auto" /></a>
+								</div>
+						<div id="opening-element-2-bottom" class="opening-element-bottom"></div>
+						</div>
+						
+						<div class="opening-element opening-element-3">
+							<div class="oe-bg-img high-res" style="background-image:url(<?php the_sub_field('element_3_high_resolution_background_image');?>)"></div>
+							<div class="opening-element-mask"></div>
+							<div class="opening-element-inner">
+								<div class="oe-3-text-wrap">
+								<div class="oe-3-top-bar oe-3-bar"></div>
+								
+									<p class="oe-3-where">where</p>
+									<p class="oe-3-everyone">Everyone</p>
+									<p class="oe-3-seen-as">is seen as</p>
+									<p class="oe-3-equal">Equal.</p>
+									
+								<div class="oe-3-bottom-bar oe-3-bar"></div>
+								<a href="#" class="centered oe-3-arrow"><img  src="/wp-content/themes/global-dignity/svg/arrow-scroll-down.svg" width="42px" height="auto" /></a>
 								</div>
 							</div>
-							<a href="#" class="centered oe-4-arrow"><img  src="/wp-content/themes/global-dignity/svg/arrow-scroll-down.svg" width="42px" height="auto" /></a>
+						<div id="opening-element-3-bottom" class="opening-element-bottom"></div>
 						</div>
-					<div id="opening-element-4-bottom" class="opening-element-bottom"></div>
-					</div>
-					
-					<div id="opening-progress-wrap">
-						<div id="opening-progress">
-							<div id="opening-nav-bg-line"></div>
-							<div id="sticky1" class="sticky-number">01</div>
-							<div id="sticky2" class="sticky-number">02</div>
-							<div id="sticky3" class="sticky-number">03</div>
-							<div id="sticky4" class="sticky-number">04</div>
+						
+						<div class="opening-element opening-element-4">
+							<div class="oe-bg-img high-res" style="background-image:url(<?php the_sub_field('element_4_high_resolution_background_image');?>)"></div>
+							<div class="opening-element-mask"></div>
+							<div class="opening-element-inner oe4-wrap">		
+								<div class="oe-4-text-top">				
+									<p class="we-build"><span>We</span> <span>are</span> <span>working</span> <span>to</span> <span>build</span></p>
+								</div>
+								<div class="oe-4-bottom">
+									<div class="oe-4-text-bottom-l">
+										<p class="that-world"><span>that</span> <span>world</span></p>
+									</div>
+									<div class="oe-4-text-bottom-r">
+										<div class="everyday-wrap oe-word-wrap">	
+											<p class="everyday">everyday</p>
+										</div>
+										<p class="we-need"><span>but</span> <span>we</span> <span>need</span></p>
+											<p class="you">you.</p>
+										<div class="bg-circle"></div>
+									</div>
+								</div>
+								<a href="#" class="centered oe-4-arrow"><img  src="/wp-content/themes/global-dignity/svg/arrow-scroll-down.svg" width="42px" height="auto" /></a>
+							</div>
+						<div id="opening-element-4-bottom" class="opening-element-bottom"></div>
 						</div>
-					</div>
-					<?php endwhile;?>
-			<?php endif;?>		
-		</div>
+						
+						<div id="opening-progress-wrap">
+							<div id="opening-progress">
+								<div id="opening-nav-bg-line"></div>
+								<div id="sticky1" class="sticky-number">01</div>
+								<div id="sticky2" class="sticky-number">02</div>
+								<div id="sticky3" class="sticky-number">03</div>
+								<div id="sticky4" class="sticky-number">04</div>
+							</div>
+						</div>
+						<?php endwhile;?>
+					<?php endif;?>		
+			</div>
+		
+		<?php endif;?>	
 				
 		<main id="main" class="site-main">
 			
