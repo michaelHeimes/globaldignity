@@ -148,6 +148,10 @@ function global_dignity_scripts() {
 	wp_enqueue_script('scroll-magic-debug', '//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.js', array(), '20151215', true);
 	
 	wp_enqueue_script( 'global-dignity-scripts', get_template_directory_uri() . '/js/scripts.js', array(), '20151215', true );
+	
+	if (is_page_template('page-template-unite-kindness.php')) {
+		wp_enqueue_script('heatmap', '//cdn.galleryjs.io/webpack/gallery-v2.launcher.js', array(), '20151215', false);
+	}
 
 	
 /*

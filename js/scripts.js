@@ -45,7 +45,6 @@ if($('#top-bar-alert').length) {
 	    .addTo(controller);
 */
 
-
 if($('#top-bar-alert').length) {
 	var alert = $('#top-bar-alert');
 	var content = $('#content');
