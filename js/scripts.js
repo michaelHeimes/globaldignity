@@ -14,6 +14,15 @@ var $all_oembed_videos = $(".video-wrap > iframe[src*='youtube'], .video-wrap > 
 		$(this).removeAttr('height').removeAttr('width');
  	});
  	
+ 	
+	$('a[data-modal="#covid-vid"]').click(function(event) {
+		console.log(this);
+	  $('#covid-vid.modal').modal({
+	    fadeDuration: 250
+	  });
+	  return false;
+	});
+ 	
 /*
 if($('#top-bar-alert').length) {
 	function setHeight() {
@@ -338,8 +347,7 @@ if($('#down-arrow-bounce').length) {
 }; 
 
 // Our Story animations
-if($('body').hasClass('page-template-page-template-our-story')){
-	var controller = new ScrollMagic.Controller(); 
+if($('#about-blue-down-arrow1').length) {
 
 	var duration = 1;
 	var blueArrowDown = document.getElementById("about-blue-down-arrow1");	
@@ -353,6 +361,9 @@ if($('body').hasClass('page-template-page-template-our-story')){
 	.setTween(blueBounce)
 	.addTo(controller);
 	
+};
+
+if($('#about-blue-down-arrow2').length) {	
 	var duration = 1;
 	var blueArrowDown = document.getElementById("about-blue-down-arrow2");	
 	var blueBounce = new TimelineMax()

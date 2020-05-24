@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Teaching Tools
+ * Template Name: Virtual Learning
  *
  * @package Global_Dignity
  */
@@ -32,21 +32,19 @@ get_header(); ?>
 						<h3 class="centered wrap-700"><?php the_sub_field('page_title');?></h3>
 						<p class="centered wrap-700"><?php the_sub_field('page_intro');?></p>
 								
-<!--
-								<div id="countries">
-									<div id="countries-inner">
-										<button class="select-button"><?php the_field('language_button_text');?><img class="select-arrow" src="/wp-content/themes/global-dignity/svg/dropdown-arrow.svg" width="18px" height="auto" /></button>
-			
-										<?php
-											wp_nav_menu( array(
-												'theme_location' => 'language_selector',
-												'menu_id'        => 'language_selector'
-											) );
-										?>
-										
-									</div>
-								</div>
--->
+						<div id="countries">
+							<div id="countries-inner">
+								<button class="select-button"><?php the_field('language_button_text');?><img class="select-arrow" src="/wp-content/themes/global-dignity/svg/dropdown-arrow.svg" width="18px" height="auto" /></button>
+	
+								<?php
+									wp_nav_menu( array(
+										'theme_location' => 'language_selector',
+										'menu_id'        => 'language_selector'
+									) );
+								?>
+								
+							</div>
+						</div>
 						
 					</div>
 				<?php endwhile;?>
@@ -107,7 +105,7 @@ get_header(); ?>
 					<div id="learner_experiences" class="wrap-1200 resource-module-wrap">
 						<p class="resource-module-category">Teaching Tools</p>
 						<h4 class="resource-module-title">Learning Experiences</h4>
-						<div class="resource-module-intro"><?php the_sub_field('text');?></div>	
+						<p class="resource-module-intro"><?php the_sub_field('text');?></p>	
 					
 						<div class="accordion">
 							<h4><span>Ages 5-9</span> Learning Experience</h4>
@@ -578,7 +576,7 @@ get_header(); ?>
 					<?php while( have_rows('toolkits') ): the_row();?>
 						<p class="resource-module-category">Teaching Tools</p>
 						<h4 class="resource-module-title"><?php the_sub_field('title');?></h4>
-						<div class="resource-module-intro"><?php the_sub_field('text');?></div>	
+						<p class="resource-module-intro"><?php the_sub_field('text');?></p>	
 						<?php if( have_rows('files') ): ?>
 							<div id="toolkit_files">
 								<div id="toolkit_files_inner">
@@ -615,7 +613,7 @@ get_header(); ?>
 					<p class="resource-module-category">Teaching Tools</p>
 					<h4 class="resource-module-title">Teaching Resources</h4>
 					<?php while( have_rows('teaching_resources') ): the_row();?>
-					<div class="resource-module-intro"><?php the_sub_field('text');?></div>
+					<p class="resource-module-intro"><?php the_sub_field('text');?></p>
 					
 							<?php if( have_rows('exploring_dignity_files') ): ?>
 								<div id="exploring_dignity_files" class="accordion">

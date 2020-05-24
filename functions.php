@@ -49,6 +49,7 @@ if ( ! function_exists( 'global_dignity_setup' ) ) :
 			'leadership-menu' => esc_html__( 'Leadership Menu', 'global-dignity' ),
 			'resources-menu' => esc_html__( 'Resources Menu', 'global-dignity' ),
 			'teaching-menu' => esc_html__( 'Teaching Menu', 'global-dignity' ),
+			'covid-menu' => esc_html__( 'Covid Menu', 'global-dignity' ),
 			'country_selector' => esc_html__( 'Countries Menu', 'global-dignity' ),
 			'language_selector' => esc_html__( 'Language Menu', 'global-dignity' )
 		) );
@@ -149,9 +150,14 @@ function global_dignity_scripts() {
 	
 	wp_enqueue_script( 'global-dignity-scripts', get_template_directory_uri() . '/js/scripts.js', array(), '20151215', true );
 	
-	if (is_page_template('page-template-unite-kindness.php')) {
+	if (is_page_template('page-template-covid-unite-kindness.php')) {
 		wp_enqueue_script('heatmap', '//cdn.galleryjs.io/webpack/gallery-v2.launcher.js', array(), '20151215', false);
+		wp_enqueue_script('modal', '//cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js', array(), '20151215', true);
+		wp_enqueue_style( 'modal-style', '//cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css' );
 	}
+	
+
+	
 
 	
 /*

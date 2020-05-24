@@ -919,11 +919,15 @@ nav#leadership-navigation.stuck, nav#resources-navigation.stuck, nav#teaching-na
 	text-transform: uppercase;
 }
 
-ul#resources-menu li a, ul#teaching-menu li a {
+ul#resources-menu li a,
+ul#teaching-menu li a,
+ul#covid-menu li a {
 	color: #fff;
 }
 
-ul#resources-menu li.current_page_item a, ul#teaching-menu li.current_page_item a {
+ul#resources-menu li.current_page_item a,
+ul#teaching-menu li.current_page_item a,
+ul#covid-menu li.current_page_item a {
 	color: #171C22;
 }
 
@@ -4811,7 +4815,7 @@ p.story-video-text {
 }
 
 /* Offest Image */
-.page-template-page-template-our-story .inner-box {
+#global-dignity-day .image-right-overlap-wrap .inner-box {
     top: 0;
     -webkit-transform: translateY(0);
         -ms-transform: translateY(0);
@@ -5420,8 +5424,9 @@ a.single-resource-nav {
 	margin-bottom: 14px;
 }
 
-p.resource-module-intro {
-	margin-bottom: 58px;
+.resource-module-intro {
+	margin-left: 0;
+	padding: 0 16px 58px;
 	width: 100%;
 }
 
@@ -5445,21 +5450,23 @@ h4.resource-module-title {
 	color: #171C22;
 }
 
-p.resource-module-intro {
-	margin-left: 0;
-	padding: 0 16px;
-}
-
 @media screen and (min-width: 768px) {
-	p.resource-module-intro {
-		margin-bottom: 58px;
+	.resource-module-intro {
 		width: 43.334%;
 		max-width: 520px;
 	}
 	
-	h4.resource-module-title, p.resource-module-intro {
+	h4.resource-module-title, .resource-module-intro {
 		margin-left: 80px;
 		padding: 0;
+	}
+	
+	h4.resource-module-title {
+		padding: 0;
+	}
+	
+	.resource-module-intro {
+		padding: 0 0 58px;	
 	}
 	
 	p.resource-module-category {
@@ -8330,7 +8337,7 @@ float: right;
 		display: block;
 	}
 	
-	.page-template-page-template-our-story .inner-box {
+	#global-dignity-day .image-right-overlap-wrap .inner-box {
 		position: absolute;
 		top: 50%;
 		-webkit-transform: translateY(-50%);
@@ -8630,10 +8637,134 @@ body .ggsi ggs-root {
 	
 }
 
+#covid-menu {
+	background-color: #DD462F;
+	color: #fff;
+}
 
+.page-template-page-template-covid-unite-kindness #banner {
+	margin-bottom: 0;
+}
 
+.page-template-page-template-covid-unite-kindness #next {
+	padding-top: 3.4em;
+	padding-bottom: 3.2em;
+}
 
+.tag-hash-wrap {
+	background: #fff;
+	text-align: center;
+}
 
+.tag-hash-wrap .tagline {
+	letter-spacing: 0;
+    line-height: 26px;
+    font-style: italic;
+    padding-bottom: 0.45em;
+}
+
+.tag-hash-wrap .divider-wrap span {
+	display: inline-block;
+	background: #171C22;
+	width: 95px;
+	height: 3px;
+}
+
+.tag-hash-wrap .hashtag {
+	font-size: 12px;
+	text-transform: uppercase;
+	padding-top: 0.5em;
+}
+
+.copy-vid-wrap {
+    padding-bottom: 6em;
+}
+
+.copy-vid-wrap .inner {
+    display: flex;
+    align-items: center;
+}
+
+.copy-vid-wrap .inner > div {
+	flex: 1 1 50%;
+}
+
+.copy-vid-wrap .inner .left {
+	padding: 1em 1em 1em 0;
+}
+
+.copy-vid-wrap .inner .left p b {
+	font-weight: bold;
+	color: #BA0F55;
+}
+
+.copy-vid-wrap .inner .right {
+	padding: 1em 0 1em 1em;
+}
+
+#covid-vid.modal {
+	max-width: 686px;
+	padding: 1.5em;
+	border-radius: 0;
+}
+
+#covid-vid.modal a.close-modal {
+    background-image: none;
+    background-color: #008bc1;
+    border-radius: 100%;
+}
+
+#covid-vid.modal a.close-modal:before,
+#covid-vid.modal a.close-modal:after {
+	content: '';
+    position: absolute;
+    top: 14.5px;
+    left: 5px;
+    display: inline-block;
+    width: 20px;
+    height: 1px;
+    background: #fff;
+}
+
+#covid-vid.modal a.close-modal:before {
+    transform: rotate(45deg);
+}
+
+#covid-vid.modal a.close-modal:after {
+    transform: rotate(-45deg);
+}
+
+.blocker {
+	z-index: 999999;
+}
+
+.page-template-page-template-covid-unite-kindness #global-dignity-day {
+	padding-top: 70px;
+}
+
+.page-template-page-template-covid-unite-kindness #global-dignity-day #small_title {
+	font-family: TradeGothicLTPro-BdCn20,sans-serif;
+	font-size: 22px;
+	color: #027FFF;
+	text-transform: uppercase;
+	letter-spacing: 0;
+	display: flex;
+	align-items: center
+}
+
+.page-template-page-template-covid-unite-kindness #global-dignity-day #small_title img {
+	margin-right: 10px;
+}
+
+.page-template-page-template-virtual-learning {
+	
+}
+
+@media screen and (min-width: 768px) {
+	.page-template-page-template-virtual-learning a.single-resource-nav {
+	    width: 50%;
+	}
+}
 
 
 
