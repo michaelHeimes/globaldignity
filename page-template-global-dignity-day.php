@@ -135,7 +135,7 @@ get_header(); ?>
 
 			
 			<?php if( have_rows('video') ): ?>
-				<div id="gdd-video" class="wrap-1440">
+				<div id="gdd-video">
 					<?php while( have_rows('video') ): the_row(); ?>
 					<div class="video-wrap">		
 						<?php the_sub_field('link');?>

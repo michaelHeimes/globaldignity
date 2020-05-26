@@ -8392,8 +8392,6 @@ body .ggsi ggs-root {
 
 /* COVID Updates */
 .covid-hero {
-	height: 100%;
-	min-height: 100vh;
 	padding-top: 52px;
 }
 
@@ -8435,6 +8433,10 @@ body .ggsi ggs-root {
 	padding-left: 0.3em;
 	display: flex;
 	flex-direction: column;
+}
+
+.covid-hero .hero-bottom .left .hashtag {
+	text-transform: uppercase;
 }
 
 .covid-hero .hero-top .row.bottom .left span {
@@ -8637,7 +8639,7 @@ body .ggsi ggs-root {
 	
 }
 
-#covid-menu {
+.menu-covid-menu-container {
 	background-color: #DD462F;
 	color: #fff;
 }
@@ -8693,7 +8695,9 @@ body .ggsi ggs-root {
 	padding: 1em 1em 1em 0;
 }
 
-.copy-vid-wrap .inner .left p b {
+.copy-vid-wrap .inner .left p b,
+.copy-vid-wrap .inner .left p strong {
+	font-family: HelveticaNeueLTPro-Bd, sans-serif;
 	font-weight: bold;
 	color: #BA0F55;
 }
@@ -8739,7 +8743,7 @@ body .ggsi ggs-root {
 }
 
 .page-template-page-template-covid-unite-kindness #global-dignity-day {
-	padding-top: 70px;
+	margin-top: 70px;
 }
 
 .page-template-page-template-covid-unite-kindness #global-dignity-day #small_title {
@@ -8754,6 +8758,14 @@ body .ggsi ggs-root {
 
 .page-template-page-template-covid-unite-kindness #global-dignity-day #small_title img {
 	margin-right: 10px;
+}
+
+.page-template-page-template-covid-unite-kindness #global-dignity-day .inner-box h1 {
+	margin-top: 0.35em;
+}
+
+.page-template-page-template-covid-unite-kindness #supporters {
+	margin-bottom: 0;
 }
 
 .page-template-page-template-virtual-learning {

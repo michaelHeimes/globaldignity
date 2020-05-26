@@ -53,7 +53,7 @@ get_header(); ?>
 			</div>
 		<?php endif;?>	
 			
-			<nav id="resources_on_page_navigation" class="centered wrap-1440">
+			<nav id="resources_on_page_navigation" class="centered">
 					<?php if( have_rows('learner_experiences_navigation') ): ?>
 							<?php while( have_rows('learner_experiences_navigation') ): the_row();?>								
 								

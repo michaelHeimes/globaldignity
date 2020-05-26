@@ -35,7 +35,7 @@ get_header(); ?>
 	
 							<div class="right">
 								<div><span>Our Mission</span></div>
-								<div><span>Has Not</span></div>
+								<div><span>Has Not.</span></div>
 							</div>
 							
 						</div>

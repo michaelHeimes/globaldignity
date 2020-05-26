@@ -76,7 +76,7 @@ get_header(); ?>
 						<?php endwhile;?>
 						</div>
 					<?php endif;?>
-					
+			</div>		
 					
 				<?php if( have_rows('dignity_principles') ): ?>
 					<?php while( have_rows('dignity_principles') ): the_row(); ?>			
@@ -99,9 +99,9 @@ get_header(); ?>
 					<?php endwhile;?>
 				<?php endif;?>	
 				
-		<div id="rule-above-video-1" class="yellow-rule-wrap os-rule-bottom">
-			<div class="yellow-rule wrap-1300"></div>
-		</div>
+				<div id="rule-above-video-1" class="yellow-rule-wrap os-rule-bottom">
+					<div class="yellow-rule wrap-1300"></div>
+				</div>
 					
 				
 				<?php if( have_rows('about_us_video_1') ): ?>
@@ -149,7 +149,7 @@ get_header(); ?>
 				<?php endif;?>
 				
 				
-				
+			<div class="wrap-1440">	
 				
 				<div id="history" class="wrap-960  mobile-padded">
 					<div class="wrap-700">

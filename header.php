@@ -96,13 +96,11 @@ src="https://www.facebook.com/tr?id=845052112552765&ev=PageView
 
 <body <?php body_class(); ?>>
 	
-<!--
 <div id="preloader">
 	<div id="loader-animation">
 		<div class="multi-color-line loader-mcl"><span class="color-1"></span><span class="color-2"></span><span class="color-3"></span><span class="color-4"></span><span class="color-5"></span></div>
 	</div>
 </div>
--->
 
 
 <div id="page" class="site">

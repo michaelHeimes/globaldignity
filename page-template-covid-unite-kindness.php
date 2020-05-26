@@ -150,7 +150,7 @@ get_header(); ?>
 								
 								<div id="small_title"><img src="/wp-content/themes/global-dignity/svg/messenger-icon.svg" width="40px" height="auto" /><span>FaceBook Messenger</span></div>
 								
-								<h1><?php the_sub_field('title');?></h1>
+								<h1><?php the_sub_field('card_heading');?></h1>
 								
 								<?php the_sub_field('text');?>
 								
