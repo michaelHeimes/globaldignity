@@ -196,6 +196,44 @@ get_header(); ?>
 						?>
 					
 				</div>
+				
+				<?php if( have_rows('story_video_grid') ): ?>
+					<div id="we-all-have-a-story" class="wrap-1350">
+						<div class="multi-color-line-wrap"><div class="multi-color-line"><span class="color-1"></span><span class="color-2"></span><span class="color-3"></span><span class="color-4"></span><span class="color-5"></span></div></div>
+					<?php while( have_rows('story_video_grid') ): the_row(); ?>
+						<h1 class="centered wrap-700 text-below"><?php the_sub_field('title');?></h1>
+						<p class="centered wrap-700"><?php the_sub_field('intro_text');?></p>
+						<?php if( have_rows('videos') ): ?>
+							<div id="videos">
+							<?php while( have_rows('videos') ): the_row(); ?>					
+								<?php if( have_rows('single_video') ): ?>
+									<?php while( have_rows('single_video') ): the_row(); ?>	
+										<div class="single_video">
+											<div class="video-wrap">
+											<?php the_sub_field('youtube_link');?>
+											</div>
+											<div class="single_video_text_wrap">
+												<div class="single_video_top_pipe"></div>
+												<span><?php the_sub_field('date');?></span>
+												<span><?php the_sub_field('location');?></span>
+												<h2><?php the_sub_field('title');?></h2>
+												<p class="story-video-text"><?php the_sub_field('text');?></p>
+											</div>
+	
+										</div>
+									<?php endwhile;?>
+								<?php endif;?>	
+							<?php endwhile;?>
+							</div>
+						<?php endif;?>	
+							<?php $link = get_sub_field('see_more_link');
+							if( $link ): ?>
+							<a class="button button-black" href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?></a>
+							<?php endif; ?>				
+					<?php endwhile;?>
+					</div>
+				<?php endif;?>			
+	
 			
 			</article><!-- #post-<?php the_ID(); ?> -->
 			

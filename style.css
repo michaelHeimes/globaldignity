@@ -2480,7 +2480,7 @@ a.centered.arrow-down-skip-link {
 	position: relative;
 	color: #fff;
     text-align: center;
-    padding-top: 14px;
+	padding: 14px 42px 10px;
     padding-bottom: 10px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -4381,7 +4381,8 @@ button.select-button > img.flipped {
 	        transform: rotateX(180deg) translateY(2px);
 }
 
-ul#country_selector {
+ul#country_selector,
+ul#language_selector {
     display: none;
     position: absolute;
     left: 0;
@@ -5349,9 +5350,15 @@ a.single-resource-nav {
 }
 
 @media screen and (min-width: 768px) {
+	
+	.hide-teaching-resources a.single-resource-nav {
+		width: 50%;
+	}
+	
 	a.single-resource-nav {
 	    width: 33.33333%;
 	}	
+	
 }
 
 .single-resource-nav p, .single-resource-nav h4, a.single-resource-nav img {
@@ -5396,10 +5403,6 @@ a.single-resource-nav {
 .resource-module-wrap {
 	background: #fff;
 	margin-bottom: 80px;
-}
-
-.resource-module-wrap p {
-	margin: 0;
 }
 
 .resource-module-category {
@@ -8770,6 +8773,10 @@ body .ggsi ggs-root {
 
 .page-template-page-template-virtual-learning {
 	
+}
+
+.page-template-page-template-covid-unite-kindness #we-all-have-a-story {
+	padding-top: 120px;	
 }
 
 @media screen and (min-width: 768px) {

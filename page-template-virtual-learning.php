@@ -72,7 +72,7 @@ get_header(); ?>
 						<div class="resource-module-intro"><?php the_sub_field('text');?></div>	
 					
 					
-						<?php if(is_page_template('foo.php')):?>
+						<?php if(is_page_template('page-template-virtual-learning.php')):?>
 						<div class="accordion">
 							<h4><span>Ages 5-9</span> Learning Experience</h4>
 							<div>
